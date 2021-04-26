@@ -1,1 +1,22 @@
 /* TODO Add site wide styles */
+
+* {
+    box-sizing: content-box;
+}
+
+body, ul, div, nav {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* body {
+    padding: 0px;
+    margin: 0px;
+    background-color: salmon;
+} */
+
+#the-main-contain {
+    width: 100vw;
+    height: 85vh;
+    background-color: rosybrown;
+}
