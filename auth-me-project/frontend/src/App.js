@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Route, Switch } from 'react-router-dom';
 
+import "./index.css"
 
 import LoginFormPage from './components/LoginFormPage';
 import SignupPage from './components/SignUpPage';
@@ -13,7 +14,6 @@ import Navigation from "./components/Navigation";
 import HomePage from "./components/SplashPage"
 
 import * as sessionActionCreators from "./store/session";
-// import SplashPage from './components/SplashPage';
 
 
 
@@ -28,10 +28,13 @@ function App() {
 
   return (
     <>
-        <Navigation isLoaded={isLoaded} />
-        <HomePage />
+    <div id="the-main-contain">
+    <Navigation isLoaded={isLoaded} />
         {isLoaded && (
         <Switch>
+          <Route exact path="/">
+          <HomePage />
+          </Route>
           <Route path="/login">
             <LoginFormPage />
           </Route>
@@ -40,6 +43,7 @@ function App() {
           </Route>
         </Switch>
         )}
+        </div>
     </>
   );
 }

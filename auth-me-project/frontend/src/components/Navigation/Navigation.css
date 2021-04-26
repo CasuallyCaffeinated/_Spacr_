@@ -1,16 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400&family=MuseoModerno:wght@200&family=Roboto:wght@300&family=Sue+Ellen+Francisco&display=swap');
+
+
 /* :root {
-    font-size: 1rem;
+    font-size: 16px;
     font-family: 'Open Sans';
     --text-primary: #b6b6b6;
     --text-secondary: #ececec;
     --bg-primary: #23232e;
     --bg-secondary: #141418;
-    --transition-speed: 600ms;
   } */
 
-  body {
-    color: black;
-    margin: 0;
-    padding: 0;
-    background-color: rgba(0, 0, 0, 0.45);
-  }
+ #nav-bar {
+    width: auto;
+    height: 3rem;
+    background-color: black;
+    padding: 0 3rem!important;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+ }
+
+ #nav-bar a {
+   margin-left: 2rem;
+ }

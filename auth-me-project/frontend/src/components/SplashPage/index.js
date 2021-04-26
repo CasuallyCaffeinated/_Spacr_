@@ -19,11 +19,8 @@ function HomePage() {
 
     return (
         <>
-            <nav id="nav-bar">
-
-            </nav>
             <div id="main-body">
-
+                        
             </div>
              <footer>
 
