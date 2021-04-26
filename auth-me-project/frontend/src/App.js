@@ -10,14 +10,18 @@ import { Route, Switch } from 'react-router-dom';
 import LoginFormPage from './components/LoginFormPage';
 import SignupPage from './components/SignUpPage';
 import Navigation from "./components/Navigation";
+import HomePage from "./components/SplashPage"
 
 import * as sessionActionCreators from "./store/session";
+// import SplashPage from './components/SplashPage';
 
 
 
 function App() {
+
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
+
   useEffect(() => {
     dispatch(sessionActionCreators.restoreUser()).then(() => setIsLoaded(true));
   }, [dispatch]);
@@ -25,6 +29,7 @@ function App() {
   return (
     <>
         <Navigation isLoaded={isLoaded} />
+        <HomePage />
         {isLoaded && (
         <Switch>
           <Route path="/login">
