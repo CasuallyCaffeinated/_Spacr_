@@ -1,6 +1,6 @@
 const express = require('express');
-const router = express.Router();
 const asyncHandler = require('express-async-handler');
+
 const { check } = require('express-validator');
 const { handleValidationErrors } = require('../../utils/validation');
 
@@ -8,9 +8,17 @@ const { handleValidationErrors } = require('../../utils/validation');
 const { setTokenCookie, requireAuth } = require("../../utils/auth");
 const { User } = require("../../db/models");
 
+const router = express.Router();
+
 //TODO: Validation Error handling for Signup:
 //? Validate Sign Up:
 const validateSignup = [
+    check('firstName')
+    .notEmpty()
+    .withMessage(`Please provide a first name`),
+    check('lastName')
+    .notEmpty()
+    .withMessage(`Please provide a last name`),
     check('email')
       .exists({ checkFalsy: true })
       .isEmail()
@@ -39,10 +47,12 @@ router.post(
     validateSignup,
     asyncHandler(async (req, res) => {
         //? Destructure the JSON content received from the request body.
-        const { email, password, username } = req.body;
+        const { firstName, lastName, email, password, username } = req.body;
 
         const user = await User.signup (
                 {
+                firstName,
+                lastName,
                 email,
                 username,
                 password

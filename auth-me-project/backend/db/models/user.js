@@ -4,6 +4,14 @@ const { Validator } = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define('User', {
+    firstName: {
+      type: DataTypes.String(40),
+      allowNull: false,
+    },
+    lastName: {
+      type: DataTypes.String(40),
+      allowNull: false
+    },
     username: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -37,7 +45,7 @@ module.exports = (sequelize, DataTypes) => {
   {
     defaultScope: {
       attributes: {
-        exclude: ['hashedPassword', 'email', 'createdAt', 'updatedAt'],
+        exclude: ['firstName', 'lastName', 'hashedPassword', 'email', 'createdAt', 'updatedAt'],
       },
     },
     scopes: {
@@ -58,8 +66,8 @@ module.exports = (sequelize, DataTypes) => {
 
 
   User.prototype.toSafeObject = function() {
-    const { id, username, email } = this;
-    return { id, username, email };
+    const { id, firstName, lastName, username, email } = this;
+    return { id, firstName, lastName, username, email };
   };
   User.prototype.validatePassword = function(password) {
     return bcrypt.compareSync(password, this.hashedPassword.toString());
@@ -87,9 +95,11 @@ module.exports = (sequelize, DataTypes) => {
 
 
 //* USER MODEL METHOD FOR SIGNING UP *//
-  User.signup = async function({username, email, password}) {
+  User.signup = async function({firstName, lastName, username, email, password}) {
     const hashedPassword = bcrypt.hashSync(password);
     const user = await User.create({
+      firstName,
+      lastName,
       username,
       email,
       hashedPassword,
