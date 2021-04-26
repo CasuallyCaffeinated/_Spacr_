@@ -5,11 +5,11 @@ const { Validator } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define('User', {
     firstName: {
-      type: DataTypes.String(40),
+      type: DataTypes.STRING(40),
       allowNull: false,
     },
     lastName: {
-      type: DataTypes.String(40),
+      type: DataTypes.STRING(40),
       allowNull: false
     },
     username: {
