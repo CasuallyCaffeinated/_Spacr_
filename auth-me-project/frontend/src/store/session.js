@@ -50,11 +50,13 @@ export const logout = () => async (dispatch) => {
 
 //* SIGN UP THUNK ACTION CREATOR //
 export const signup = (user) => async dispatch => {
-    const { username, email, password } = user;
+    const { firstName, lastName, username, email, password } = user;
 
     const response = await csrfFetch("/api/users", {
         method: 'POST',
         body: JSON.stringify({
+                firstName,
+                lastName,
                 username,
                 email,
                 password

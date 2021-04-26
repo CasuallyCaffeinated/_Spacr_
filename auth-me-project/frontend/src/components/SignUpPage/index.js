@@ -5,7 +5,7 @@ import './SignupForm.css'
 import React, { useState } from 'react';
 import * as sessionActionCreators from '../../store/session';
 import { useDispatch, useSelector } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 
 function SignupPage() {
     //? All the the react-redux hooks:
@@ -13,6 +13,8 @@ function SignupPage() {
     const sessionUser = useSelector(state => state.session.user);
 
     //? useState hooks:
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('')
     const [email, setEmail] = useState('');
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -40,9 +42,30 @@ function SignupPage() {
 
       return (
         <form className="formSignup" onSubmit={handleSubmit}>
+          <div className="sign-up-form">
           <ul>
             {errors.map((error, idx) => <li key={idx}>{error}</li>)}
           </ul>
+          <label>
+            First Name
+            <input
+              type="text"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+              placeholder={`Enter your first name...`}
+              required
+            />
+          </label>
+          <label>
+            Last Name
+            <input
+            type="text"
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+            placeholder={`Enter your last name...`}
+            required
+            />
+          </label>
           <label>
             Email
             <input
@@ -84,6 +107,13 @@ function SignupPage() {
             />
           </label>
           <button type="submit">Sign Up</button>
+          <div id="login-btn">
+            <h4>Already a member of Spacr?</h4>
+              <p>
+                  <Link key={login_btn} to="/login">Click here!</Link>
+              </p>
+          </div>
+          </div>
         </form>
       );
     }
