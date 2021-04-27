@@ -46,9 +46,10 @@
 .formSignup label {
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
-    font-size: 1rem;
+    font-size: 1.25rem;
     color: whitesmoke;
-    margin: 10px 0px;
+    margin-top: 10px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,9 +60,6 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
     font-size: 1rem;
-    /* display: block;
-    position: relative; */
-    /* left: 1.25rem; */
     margin-top: 10px;
     padding:  0.5rem 3rem;
     border: 1px solid rgba(2, 71, 139, 0.65);
@@ -70,9 +68,9 @@
 }
 
 ::placeholder {
-    font-size: 0.75rem;
+    font-size: 1rem;
     text-align: left;
-    font-style: italic;
+    font-family: 'Roboto', sans-serif;
 }
 
 .input2 {

@@ -35,4 +35,12 @@ font-family: 'Sue Ellen Francisco', cursive;
    margin-left: 2rem;
    font-family: 'Roboto', sans-serif;
    text-decoration: none;
+   color: rgb(203, 135, 248);
+   font-weight: bold;
+   font-size: 1.10rem;
+ }
+
+ #nav-bar a:first-of-type {
+   position: relative;
+   right: 65rem;
  }

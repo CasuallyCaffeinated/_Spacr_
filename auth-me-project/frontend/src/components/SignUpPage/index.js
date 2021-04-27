@@ -52,62 +52,57 @@ function SignupPage() {
             {errors.map((error, idx) => <li key={idx}>{error}</li>)}
           </ul>
           <label>
-            First Name
+              Sign up for Spacr
             <input
               type="text"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
-              placeholder={`Enter your first name...`}
+              placeholder={`First name`}
               required
             />
           </label>
           <label>
-            Last Name
             <input
             type="text"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
-            placeholder={`Enter your last name...`}
+            placeholder={`Last name`}
             required
             />
           </label>
           <label>
-            Email
             <input
               type="text"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder={`Enter your email address...`}
+              placeholder={`Email address`}
               required
             />
           </label>
           <label>
-            Username
             <input
               type="text"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              placeholder={`Create a username...`}
+              placeholder={`Username`}
               required
             />
           </label>
           <label>
-            Password
             <input
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder={`Create a password...`}
+              placeholder={`Password`}
               required
             />
           </label>
           <label>
-            Confirm Password
             <input
               type="password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
-              placeholder={`Confirm your password...`}
+              placeholder={`Confirm password`}
               required
             />
           </label>
