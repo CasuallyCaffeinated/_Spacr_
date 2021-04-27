@@ -9,6 +9,7 @@
 
 //* SIGNUP FORM COMPONENT *//
 import './SplashPage.css'
+import Footer from "../Footer/index"
 
 //todo: import all the necessary hooks and actions
 import React, { useState } from 'react';
@@ -18,14 +19,12 @@ function HomePage() {
 
 
     return (
-        <>
+        <div>
             <div id="main-body">
-                        
-            </div>
-             <footer>
 
-            </footer>
-        </>
+            </div>
+            <Footer />
+        </div>
     )
 }
 

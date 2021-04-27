@@ -1,5 +1,6 @@
 //* LOGIN FORM COMPONENT *//
 import './LoginForm.css'
+import Footer from "../Footer/index"
 
 //todo: import all the necessary hooks and actions
 import React, { useState } from 'react';
@@ -35,6 +36,8 @@ function LoginFormPage() {
             }
             //? JSX Form for login:
             return (
+                <>
+                    <div className="form-main-body">
                     <form className="formLogin" onSubmit={handleSubmit}>
                             <ul>
                                 {errors.map((error, index) => {
@@ -63,6 +66,9 @@ function LoginFormPage() {
                             </label>
                             <button type="submit">Log In</button>
                     </form>
+                    </div>
+                    <Footer />
+                </>
             )
 }
 

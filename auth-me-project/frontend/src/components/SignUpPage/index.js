@@ -1,5 +1,6 @@
 //* SIGNUP FORM COMPONENT *//
 import './SignupForm.css'
+import Footer from "../Footer/index"
 
 //todo: import all the necessary hooks and actions
 import React, { useState } from 'react';
@@ -41,8 +42,10 @@ function SignupPage() {
       };
 
       return (
-        <form className="formSignup" onSubmit={handleSubmit}>
-          <div className="sign-up-form">
+        <>
+        <div className="form-main-body">
+          <div id="form-div">
+ <form className="formSignup" onSubmit={handleSubmit}>
           <ul>
             {errors.map((error, idx) => <li key={idx}>{error}</li>)}
           </ul>
@@ -106,6 +109,7 @@ function SignupPage() {
               required
             />
           </label>
+          <div id="after-form">
           <button type="submit">Sign Up</button>
           <div id="login-btn">
             <h4>Already a member of Spacr?</h4>
@@ -114,7 +118,12 @@ function SignupPage() {
               </p>
           </div>
           </div>
-        </form>
+            </form>
+          </div>
+
+        </div>
+        <Footer />
+        </>
       );
     }
 

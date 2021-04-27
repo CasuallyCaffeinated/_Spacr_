@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400&family=MuseoModerno:wght@200&family=Roboto:wght@300&family=Sue+Ellen+Francisco&display=swap');
 
+/*! Font Families:
+font-family: 'Inria Sans', sans-serif;
+font-family: 'MuseoModerno', cursive;
+font-family: 'Roboto', sans-serif;
+font-family: 'Sue Ellen Francisco', cursive;
+*/
 
 /* :root {
     font-size: 16px;
@@ -22,4 +28,6 @@
 
  #nav-bar a {
    margin-left: 2rem;
+   font-family: 'Roboto', sans-serif;
+   text-decoration: none;
  }
