@@ -50,7 +50,8 @@ export const demoUserLogin = () => async dispatch => {
                 password: 'password'
             })
         })
-        const demoData = await response.json()
+        //? parse the json, and the dispatch it using the action creator for setting a user.
+        const demoData = await res.json()
 
         dispatch(setUser(demoData.user))
 

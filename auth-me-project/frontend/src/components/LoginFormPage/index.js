@@ -1,5 +1,7 @@
 //* LOGIN FORM COMPONENT *//
 import './LoginForm.css'
+
+
 import Footer from "../Footer/index"
 
 //todo: import all the necessary hooks and actions
@@ -64,8 +66,14 @@ function LoginFormPage() {
                                         required
                                     />
                             </label>
-                            <button type="submit">Log In</button>
+                            <button type="submit" >Log In</button>
                     </form>
+                        <div id="demo-btn">
+                            <button
+                                onClick={() => dispatch(sessionActionCreators.demoUserLogin())}
+                            >
+                                Demo Login</button>
+                        </div>
                     </div>
                     <Footer />
                 </>
