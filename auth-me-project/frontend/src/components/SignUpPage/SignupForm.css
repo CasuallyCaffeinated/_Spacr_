@@ -1,12 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400&family=MuseoModerno:wght@200&family=Roboto:wght@300&family=Sue+Ellen+Francisco&display=swap');
 
 /* .form-main-body {
-    height: 85%;
+    overflow-y: hidden;
+} */
+
+/* #form-div {
+
 } */
 
 #form-div {
-    height: 636px;
-    margin: 0 15rem;
+    /* height: 636px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    /* margin: 0 35rem; */
+    position: absolute;
+    top: 2.5rem;
+
 }
 
 .formSignup {
@@ -15,15 +26,28 @@
     flex-direction: column;
     align-items: center;
     justify-content: center; */
-    padding: 10px;
+    /* padding: 30px; */
     /* border: 2px solid rgba(0, 0, 0, 0.75); */
+    background-color: rgba(102, 73, 184, 0.75);
+    padding: 10px 30px 0px 30px;
+    border: 2px solid rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+    position: relative;
+    top: 0.9rem;
+    left: 36rem;
+
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    /* height: fit-content; */
 }
 
 .formSignup label {
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
     font-size: 1rem;
-    color: purple;
+    color: whitesmoke;
     margin: 10px 0px;
     display: flex;
     flex-direction: column;
@@ -66,13 +90,13 @@
 }
 
 .formSignup button {
-    width: 10%;
+    width: 55%;
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin-top: 20px;
     position: relative;
-    right: 0.5rem;
+    /* right: 0.5rem; */
     padding:  0.5rem 1.35rem;
     border: 1px solid rgba(2, 71, 139, 0.65);
     border-radius: 10px;
@@ -90,4 +114,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+}
+
+#after-form h4 {
+    color: whitesmoke;
+    font-family: 'Roboto', sans-serif;
+}
+
+#after-form a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: 'Roboto', sans-serif;
 }

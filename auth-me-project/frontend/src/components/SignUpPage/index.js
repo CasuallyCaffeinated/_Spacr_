@@ -1,6 +1,7 @@
 //* SIGNUP FORM COMPONENT *//
 import './SignupForm.css'
 import Footer from "../Footer/index"
+import apod2 from "../../imgs/apod2.jpg"
 
 //todo: import all the necessary hooks and actions
 import React, { useState } from 'react';
@@ -44,8 +45,9 @@ function SignupPage() {
       return (
         <>
         <div className="form-main-body">
+          <img src={apod2} alt="APOD" />
           <div id="form-div">
- <form className="formSignup" onSubmit={handleSubmit}>
+          <form className="formSignup" onSubmit={handleSubmit}>
           <ul>
             {errors.map((error, idx) => <li key={idx}>{error}</li>)}
           </ul>
@@ -120,9 +122,8 @@ function SignupPage() {
           </div>
             </form>
           </div>
-
-        </div>
         <Footer />
+        </div>
         </>
       );
     }

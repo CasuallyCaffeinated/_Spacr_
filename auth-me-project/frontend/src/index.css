@@ -6,13 +6,18 @@
     overflow-x: hidden; */
 }
 
+/* :root {
+    font-size: 16px;
+} */
+
 body, ul, div, nav {
     padding: 0px;
     margin: 0px;
 }
 
-#the-main-contain {
+/* #the-main-contain {
     width: 100vw;
     height: 100vh;
+    margin-bottom: 0px;
     background-color: rosybrown;
-}
+} */

@@ -12,6 +12,7 @@ import LoginFormPage from './components/LoginFormPage';
 import SignupPage from './components/SignUpPage';
 import Navigation from "./components/Navigation";
 import HomePage from "./components/SplashPage"
+// import Footer from "./components/Footer"
 
 import * as sessionActionCreators from "./store/session";
 
@@ -28,22 +29,23 @@ function App() {
 
   return (
     <>
-    <div id="the-main-contain">
+    {/* <div id="the-main-contain"> */}
     <Navigation isLoaded={isLoaded} />
         {isLoaded && (
         <Switch>
           <Route exact path="/">
           <HomePage />
+          {/* <Footer /> */}
           </Route>
           <Route path="/login">
             <LoginFormPage />
           </Route>
           <Route path="/signup">
-              <SignupPage />
+            <SignupPage />
           </Route>
         </Switch>
         )}
-        </div>
+        {/* </div> */}
     </>
   );
 }

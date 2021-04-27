@@ -4,7 +4,7 @@ function Footer() {
 
     return (
         <footer id="footer">
-                <h1>Test Message</h1>
+                {/* <h1>Test Message</h1> */}
             </footer>
     )
 }

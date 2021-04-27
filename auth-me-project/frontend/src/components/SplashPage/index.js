@@ -7,9 +7,10 @@
 //? #3 The footer with all the social media links
 
 
-//* SIGNUP FORM COMPONENT *//
+//* HOMEPAGE COMPONENT *//
 import './SplashPage.css'
 import Footer from "../Footer/index"
+import apod2 from "../../imgs/apod2.jpg";
 
 //todo: import all the necessary hooks and actions
 import React, { useState } from 'react';
@@ -20,9 +21,9 @@ function HomePage() {
 
     return (
         <div>
-            <div id="main-body">
-
-            </div>
+            {/* <div id="main-body"> */}
+            <img src={apod2} alt="APOD" />
+            {/* </div> */}
             <Footer />
         </div>
     )
