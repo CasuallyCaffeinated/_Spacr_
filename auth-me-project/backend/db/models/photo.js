@@ -2,21 +2,21 @@
 module.exports = (sequelize, DataTypes) => {
   const Photo = sequelize.define('Photo', {
     title: {
-      type: DataTypes.STRING(50),
+      type: DataTypes.STRING(100),
       allowNull: false,
     },
     category: {
-      type: DataTypes.STRING(50),
+      type: DataTypes.STRING(100),
       allowNull: false
     },
     description: {
-      type: DataTypes.STRING(500)
+      type: DataTypes.STRING(2500)
     },
     photoUrl: {
       type: DataTypes.STRING(255),
     },
     authorCredited: {
-      type: DataTypes.STRING(50)
+      type: DataTypes.STRING(100)
     },
     userId: {
       type: DataTypes.INTEGER,
