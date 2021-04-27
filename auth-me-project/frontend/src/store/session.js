@@ -39,6 +39,24 @@ export const restoreUser = () => async (dispatch) => {
     return response;
 };
 
+//////////////////////* DEMO USER THUNK AC //////////////////////
+//todo: make a demo user thunk action creator:
+export const demoUserLogin = () => async dispatch => {
+    //? First grab the demo user from the api
+        const res = await csrfFetch("/api/session", {
+            method: "POST",
+            body: JSON.stringify({
+                credential: 'Demo-lition',
+                password: 'password'
+            })
+        })
+        const demoData = await response.json()
+
+        dispatch(setUser(demoData.user))
+
+        return res;
+}
+
 ////////////* LOG OUT THUNK AC */////////////////
 export const logout = () => async (dispatch) => {
     const response = await csrfFetch('/api/session', {
@@ -69,7 +87,9 @@ export const signup = (user) => async dispatch => {
 
 
 ////////////////////////////////////////////////* SESSION REDUCER ////////////////////////////////////////////////
+
 const initialState = { user: null };
+
 const sessionReducer = (state = initialState, action) => {
     let newState;
     switch (action.type) {
