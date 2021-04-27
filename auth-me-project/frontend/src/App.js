@@ -12,6 +12,7 @@ import LoginFormPage from './components/LoginFormPage';
 import SignupPage from './components/SignUpPage';
 import Navigation from "./components/Navigation";
 import HomePage from "./components/SplashPage"
+import UserProfile from "./components/UserProfile"
 // import Footer from "./components/Footer"
 
 import * as sessionActionCreators from "./store/session";
@@ -43,9 +44,9 @@ function App() {
           <Route path="/signup">
             <SignupPage />
           </Route>
-          {/* <Route path="/demo">
-              <Demo />
-          </Route> */}
+          <Route path="/profile/:id">
+              <UserProfile /> 
+          </Route>
         </Switch>
         )}
         {/* </div> */}

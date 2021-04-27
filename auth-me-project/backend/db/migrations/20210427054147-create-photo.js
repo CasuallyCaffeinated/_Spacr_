@@ -9,21 +9,37 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       title: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(100),
+        allowNull: false
+      },
+      category: {
+        type: Sequelize.STRING(100),
+        allowNull: false,
+      },
+      description: {
+        type: Sequelize.STRING(2500)
       },
       photoUrl: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(255),
+        allowNull: false
+      },
+      authorCredited: {
+        type: Sequelize.STRING(100),
       },
       userId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {model: "Users"}
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn('now')
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn('now')
       }
     });
   },

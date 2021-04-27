@@ -24,7 +24,7 @@ function LoginFormPage() {
     //? React-router
     const history = useHistory()
 
-    if (sessionUser) history.push("/");
+    if (sessionUser) history.push(`/profile/${sessionUser.id}`);
 
     //? Handle submit custom event handler:
     const handleSubmit = (e) => {

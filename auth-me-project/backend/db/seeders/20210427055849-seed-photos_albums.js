@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  up: (queryInterface, Sequelize) => {
+  up: async (queryInterface, Sequelize) => {
     /*
       Add altering commands here.
       Return a promise to correctly handle asynchronicity.
@@ -14,7 +14,7 @@ module.exports = {
     */
   },
 
-  down: (queryInterface, Sequelize) => {
+  down: async (queryInterface, Sequelize) => {
     /*
       Add reverting commands here.
       Return a promise to correctly handle asynchronicity.
