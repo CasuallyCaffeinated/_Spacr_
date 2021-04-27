@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400&family=MuseoModerno:wght@200&family=Roboto:wght@300&family=Sue+Ellen+Francisco&display=swap');
 
+/* .form-main-body {
+    height: 85%;
+} */
+
 .formLogin {
     display: flex;
     flex-direction: column;
