@@ -35,17 +35,16 @@ function App() {
         {isLoaded && (
         <Switch>
           <Route exact path="/">
-          <HomePage />
-          {/* <Footer /> */}
+              <HomePage />
           </Route>
           <Route path="/login">
-            <LoginFormPage />
+              <LoginFormPage />
           </Route>
           <Route path="/signup">
             <SignupPage />
           </Route>
           <Route path="/profile/:id">
-              <UserProfile /> 
+              <UserProfile />
           </Route>
         </Switch>
         )}

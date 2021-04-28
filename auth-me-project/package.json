@@ -22,5 +22,6 @@
   "bugs": {
     "url": "https://github.com/Christian-Cozma/auth-me-project/issues"
   },
-  "homepage": "https://github.com/Christian-Cozma/auth-me-project#readme"
+  "homepage": "https://github.com/Christian-Cozma/auth-me-project#readme",
+  "dependencies": {}
 }
