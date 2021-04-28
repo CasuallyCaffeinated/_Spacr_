@@ -70,9 +70,13 @@ function Navigation({ isLoaded }){
 function Navbar(props) {
   return (
 <nav className="navbar">
+      <span className="logo-container">
+        {/* <img>TO ADD: Site's main imgge Logo thing</img> */}
+      <h1 id="logo-text">Spacr</h1>
       <ul className="navbar-nav-links">
         {props.children}
       </ul>
+      </span>
     </nav>
   )
 }

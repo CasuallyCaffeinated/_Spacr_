@@ -18,12 +18,35 @@ font-family: 'Sue Ellen Francisco', cursive;
   border-bottom: var(--border);
 }
 
+/* The logo container */
+.logo-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* The CSS for the logo goes here: */
+#logo-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 5%;
+  width: 75%;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--text-color);
+}
+
 /*? The child element goes here: */
 .navbar-nav-links {
   max-width: 100%;
   height: 100%;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 
 /*? All of the LI elements */
