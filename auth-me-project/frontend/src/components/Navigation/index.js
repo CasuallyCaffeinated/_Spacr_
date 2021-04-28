@@ -19,23 +19,32 @@ function Navigation({ isLoaded }){
   } else {
     sessionLinks = (
       <>
-        <NavLink to="/login">Log In</NavLink>
-        <NavLink to="/signup">Sign Up</NavLink>
-        <NavLink to="/demo">Demo Login</NavLink>
+        <NavLink to="/signup">{<i class="fas fa-user-plus"></i>}</NavLink>
+        <NavLink to="/login">{<i class="fas fa-sign-in-alt"></i>}</NavLink>
+        {/* <NavLink to="/demo">Demo Login</NavLink> */}
       </>
     );
   }
 
   return (
-    <nav id="nav-bar">
-        <ul>
-          <li>
-                <NavLink exact to="/">Home</NavLink>
+        <Navbar>
+          <li className="navlink-item">
+                <NavLink exact to="/">{<i class="fas fa-home"></i>}</NavLink>
                 {isLoaded && sessionLinks}
           </li>
-        </ul>
-    </nav>
+        </Navbar>
   );
+}
+
+
+function Navbar(props) {
+  return (
+<nav className="navbar">
+      <ul className="navbar-nav-links">
+        {props.children}
+      </ul>
+    </nav>
+  )
 }
 
 export default Navigation;

@@ -13,8 +13,9 @@ import Footer from "../Footer/index"
 import apod2 from "../../imgs/apod2.jpg";
 
 //todo: import all the necessary hooks and actions
-import React, { useState } from 'react';
-import { useHistory, Link, NavLink } from 'react-router-dom';
+import React from 'react';
+// import { useState } from "react";
+// import { useHistory, Link, NavLink } from 'react-router-dom';
 
 function HomePage() {
 
