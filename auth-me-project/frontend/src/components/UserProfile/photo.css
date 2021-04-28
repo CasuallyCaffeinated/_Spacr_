@@ -1,24 +1,19 @@
-.master-span {
+#master-div {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: fit-content;
     display: grid;
-    grid-area: 1fr 1fr 1fr 1fr;
-    /* justify-content: center;
-    align-items: center; */
-    width: 25%;
+    grid-template-columns: 1fr 1fr;
 }
 
 .image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0rem 3rem 0rem 3rem;
+}
+
+.images-space {
     width: 100%;
     height: 50%;
+    box-shadow: 1px 1px 12px 1px rgba(0, 0, 0, 0.7);
+    padding: 1rem;
 }
-
-/* .images-space {
-    width: 25%;
-    height: 25%;
-}
-
-#img-desc {
-    max-width: 50%;
-} */

@@ -5,12 +5,13 @@ import { useEffect } from "react"
 import { getUserPhotos } from "../../store/photos"
 
 import Photo from "./Photo";
+import "./photo.css"
 
 
 function UserProfile() {
     const dispatch = useDispatch()
     const photos = useSelector(state => state.photo)
-   
+
     const { id } = useParams()
 
     useEffect(() => {
@@ -22,9 +23,11 @@ function UserProfile() {
     return (
         <>
         <h1>Welcome!</h1>
-        {
-            Object.values(photos).map(image => <Photo key={image.id} image={image} />)
-        }
+        <div id="master-div">
+                        {
+                        Object.values(photos).map(image => <Photo key={image.id} image={image} />)
+                    }
+        </div>
         </>
     )
 }

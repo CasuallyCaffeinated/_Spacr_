@@ -4,8 +4,6 @@ function Photo({image}) {
 console.log(image);
     return (
         <>
-            <span className="master-span">
-                <h1></h1>
                 <div className="image-container">
                             <h3>{image.title}</h3>
                             <img
@@ -15,10 +13,10 @@ console.log(image);
                             />
                             <h3>{image.authorCredited}</h3>
                         <div id="img-desc">
+                            A description:
                             <p>{image.description}</p>
                         </div>
                 </div>
-            </span>
         </>
     )
 }
