@@ -67,16 +67,35 @@ router.post(
 
 
 //////////////////////////////////////////* PHOTOS /////////////////////////////////////////
-router.get(
+
+//? Route to render all photo that belong to a user:
+router.get (
   '/photos/:userId',
   asyncHandler(async(req, res) => {
     const { userId } = req.params
+
     const photos = await Photo.findAll({
       where: {
         userId
       }
     })
       res.json(photos)
+  })
+)
+
+//? Route to update a photo on a user's profile
+router.put (
+  "/photo/:photoId",
+  asyncHandler(async (req, res) => {
+     const { photoId } = req.params
+
+     const photo = await Photo.findByPk(photoId)
+     await photo.update ({
+       title,
+       description
+     })
+
+     res.json(photo)
   })
 )
 
