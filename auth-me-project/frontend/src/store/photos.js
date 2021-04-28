@@ -44,12 +44,21 @@ export const updateUserPhoto = (payload) => async dispatch => {
 ////////////////////////////* REDUCER *///////////////////////////
 const photoReducer = (state = {}, action) => {
     switch (action.type) {
-        case GET_USER_PHOTOS:
+        case GET_USER_PHOTOS: {
             const newState = {}
             action.photosPayload.forEach(photo => {
                 newState[photo.id] = photo
             })
             return newState
+        }
+            case UPDATE_USER_PHOTO: {
+                const newState = {
+                    ...state,
+                    [action.photoPayload.id]: action.photoPayload
+                }
+                console.log(newState);
+                return newState;
+            }
         default:
             return state
     }

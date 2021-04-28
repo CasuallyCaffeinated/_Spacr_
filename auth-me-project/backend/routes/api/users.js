@@ -88,6 +88,8 @@ router.put (
   "/photo/:photoId",
   asyncHandler(async (req, res) => {
      const { photoId } = req.params
+     
+      const { title, description } = req.body
 
      const photo = await Photo.findByPk(photoId)
      await photo.update ({

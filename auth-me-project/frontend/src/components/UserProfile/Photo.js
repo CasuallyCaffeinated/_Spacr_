@@ -6,6 +6,7 @@ console.log(image);
         <>
                 <div className="image-container">
                             <h3 className="heading title">{image.title}</h3>
+                            <span>{<i class="fas fa-edit"></i>}</span>
                             <img
                             className="images-space"
                             src={image.photoUrl}
