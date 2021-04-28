@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400&family=MuseoModerno:wght@200&family=Roboto:wght@300&family=Sue+Ellen+Francisco&display=swap');
 
 @import "../../index.css";
+@import "../UserProfile/photo.css";
 
 
 /*! Font Families:
@@ -34,7 +35,16 @@ font-family: 'Sue Ellen Francisco', cursive;
 }
 
 .navlink-item i {
-  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  font-size: 1.65rem;
+}
+
+.nav-btn.text {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 

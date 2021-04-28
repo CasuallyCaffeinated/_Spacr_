@@ -5,6 +5,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { useParams } from "react-router-dom";
 import ProfileButton from './ProfileButton';
 import './Navigation.css';
 
@@ -19,8 +20,28 @@ function Navigation({ isLoaded }){
   } else {
     sessionLinks = (
       <>
-        <NavLink to="/signup">{<i class="fas fa-user-plus"></i>}</NavLink>
-        <NavLink to="/login">{<i class="fas fa-sign-in-alt"></i>}</NavLink>
+        <NavLink to="/signup">
+          <ul>
+            <li>
+          {<i class="fas fa-user-plus"></i>}
+            </li>
+            <li className="nav-btn text">
+              Sign up!
+            </li>
+          </ul>
+          </NavLink>
+        <NavLink to="/login">
+          <ul>
+          <li>
+          {
+          <i class="fas fa-sign-in-alt"></i>
+          }
+          </li>
+          <li className="nav-btn text">
+            Log in
+          </li>
+          </ul>
+          </NavLink>
         {/* <NavLink to="/demo">Demo Login</NavLink> */}
       </>
     );
@@ -29,7 +50,16 @@ function Navigation({ isLoaded }){
   return (
         <Navbar>
           <li className="navlink-item">
-                <NavLink exact to="/">{<i class="fas fa-home"></i>}</NavLink>
+                <NavLink exact to="/">
+                  <ul>
+                    <li>
+                  {<i class="fas fa-home"></i>}
+                    </li>
+                    <li className="nav-btn text">
+                        Home
+                    </li>
+                  </ul>
+                  </NavLink>
                 {isLoaded && sessionLinks}
           </li>
         </Navbar>
