@@ -2,22 +2,29 @@
 
 * {
     box-sizing: border-box;
-    /* overflow-y: hidden;
-    overflow-x: hidden; */
+
 }
 
-/* :root {
-    font-size: 16px;
-} */
+:root {
+    --bg: #242526;
+    --bg-accent: #484A4D;
+    --text-color: #DADCE1;
+    --nav-size: 60px;
+    --border: 1px solid #474A4D;
+    --border-radius: 8px;
+    --speed: 500ms;
+}
 
 body, ul, div, nav {
     padding: 0px;
     margin: 0px;
 }
 
-/* #the-main-contain {
-    width: 100vw;
-    height: 100vh;
-    margin-bottom: 0px;
-    background-color: rosybrown;
-} */
+ul {
+    list-style: none;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}

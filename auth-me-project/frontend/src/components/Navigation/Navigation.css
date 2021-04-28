@@ -1,4 +1,8 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400&family=MuseoModerno:wght@200&family=Roboto:wght@300&family=Sue+Ellen+Francisco&display=swap');
+
+@import "../../index.css";
+
 
 /*! Font Families:
 font-family: 'Inria Sans', sans-serif;
@@ -7,6 +11,30 @@ font-family: 'Roboto', sans-serif;
 font-family: 'Sue Ellen Francisco', cursive;
 */
 
+.navbar {
+  height: var(--nav-size);
+  background-color: var(--bg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************************* OLD STYLES ************************************/
 /* :root {
     font-size: 16px;
     font-family: 'Open Sans';
@@ -15,11 +43,11 @@ font-family: 'Sue Ellen Francisco', cursive;
     --bg-primary: #23232e;
     --bg-secondary: #141418;
   } */
-
+/*
  #nav-bar {
     width: auto;
     height: 3rem;
-    /* background-color: rgba(162, 133, 241, 0.75); */
+     background-color: rgba(162, 133, 241, 0.75);
     background-color: rgb(0, 0, 0);
     padding: 0 3rem!important;
     display: flex;
@@ -44,3 +72,5 @@ font-family: 'Sue Ellen Francisco', cursive;
    position: relative;
    right: 65rem;
  }
+
+ */
