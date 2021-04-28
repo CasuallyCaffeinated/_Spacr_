@@ -5,6 +5,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { useParams } from "react-router-dom";
 import ProfileButton from './ProfileButton';
 import './Navigation.css';
 
@@ -19,23 +20,65 @@ function Navigation({ isLoaded }){
   } else {
     sessionLinks = (
       <>
-        <NavLink to="/login">Log In</NavLink>
-        <NavLink to="/signup">Sign Up</NavLink>
-        <NavLink to="/demo">Demo Login</NavLink>
+        <NavLink to="/signup">
+          <ul>
+            <li>
+          {<i class="fas fa-user-plus"></i>}
+            </li>
+            <li className="nav-btn text">
+              Sign up!
+            </li>
+          </ul>
+          </NavLink>
+        <NavLink to="/login">
+          <ul>
+          <li>
+          {
+          <i class="fas fa-sign-in-alt"></i>
+          }
+          </li>
+          <li className="nav-btn text">
+            Log in
+          </li>
+          </ul>
+          </NavLink>
+        {/* <NavLink to="/demo">Demo Login</NavLink> */}
       </>
     );
   }
 
   return (
-    <nav id="nav-bar">
-        <ul>
-          <li>
-                <NavLink exact to="/">Home</NavLink>
+        <Navbar>
+          <li className="navlink-item">
+                <NavLink exact to="/">
+                  <ul>
+                    <li>
+                  {<i class="fas fa-home"></i>}
+                    </li>
+                    <li className="nav-btn text">
+                        Home
+                    </li>
+                  </ul>
+                  </NavLink>
                 {isLoaded && sessionLinks}
           </li>
-        </ul>
-    </nav>
+        </Navbar>
   );
+}
+
+
+function Navbar(props) {
+  return (
+<nav className="navbar">
+      <span className="logo-container">
+        {/* <img>TO ADD: Site's main imgge Logo thing</img> */}
+      <h1 id="logo-text">Spacr</h1>
+      <ul className="navbar-nav-links">
+        {props.children}
+      </ul>
+      </span>
+    </nav>
+  )
 }
 
 export default Navigation;

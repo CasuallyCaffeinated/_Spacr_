@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400&family=MuseoModerno:wght@200&family=Roboto:wght@300&family=Sue+Ellen+Francisco&display=swap');
 
+@import "../../index.css";
+@import "../UserProfile/photo.css";
+
+
 /*! Font Families:
 font-family: 'Inria Sans', sans-serif;
 font-family: 'MuseoModerno', cursive;
@@ -7,6 +11,91 @@ font-family: 'Roboto', sans-serif;
 font-family: 'Sue Ellen Francisco', cursive;
 */
 
+.navbar {
+  height: var(--nav-size);
+  background-color: var(--bg);
+  padding: 0rem 1rem;
+  border-bottom: var(--border);
+}
+
+/* The logo container */
+.logo-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* The CSS for the logo goes here: */
+#logo-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 5%;
+  width: 75%;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--text-color);
+}
+
+/*? The child element goes here: */
+.navbar-nav-links {
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/*? All of the LI elements */
+.navlink-item {
+  width: calc(var(--nav-size) * 5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navlink-item i {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  font-size: 1.65rem;
+}
+
+.nav-btn.text {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************** OLD STYLES *********************/
 /* :root {
     font-size: 16px;
     font-family: 'Open Sans';
@@ -16,10 +105,10 @@ font-family: 'Sue Ellen Francisco', cursive;
     --bg-secondary: #141418;
   } */
 
- #nav-bar {
+ /* #nav-bar {
     width: auto;
     height: 3rem;
-    /* background-color: rgba(162, 133, 241, 0.75); */
+    /* background-color: rgba(162, 133, 241, 0.75);
     background-color: rgb(0, 0, 0);
     padding: 0 3rem!important;
     display: flex;
@@ -43,4 +132,4 @@ font-family: 'Sue Ellen Francisco', cursive;
  #nav-bar a:first-of-type {
    position: relative;
    right: 65rem;
- }
+ } */
