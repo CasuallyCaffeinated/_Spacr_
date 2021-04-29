@@ -20,9 +20,9 @@ const updateImg = photo => ({
     photoPayload: photo
 })
 
-const removeImg = photo => ({
+const removeImg = photoId => ({
     type: DELETE_USER_PHOTO,
-    photoErased: photo
+    photoErased: photoId
 })
 
 
@@ -50,10 +50,12 @@ export const updateUserPhoto = (payload) => async dispatch => {
 }
 
 export const deleteUserPhoto = (photo) => async dispatch => {
-    await csrfFetch(`/api/users/photo/${photo.id}`, {
+    const response = await csrfFetch(`/api/users/photo/${photo.id}`, {
         method: "DELETE"
     })
-    dispatch(removeImg())
+    if(response.ok) {
+        dispatch(removeImg(photo.id))
+    }
 }
 
 ////////////////////////////* REDUCER *///////////////////////////
