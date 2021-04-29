@@ -59,11 +59,63 @@ font-family: 'Zen Dots', cursive; */
 
 
 /* DROPDOWN */
+.dd-span {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: auto;
+    height: auto;
+}
+
+.dd-span button {
+        display: inline-block;
+        border: none;
+        border-radius: 10px;
+        padding: 0.5rem 1rem;
+        margin: 0;
+        text-decoration: none;
+        background: #0069ed;
+        color: #ffffff;
+        font-family: sans-serif;
+        font-size: 1rem;
+        cursor: pointer;
+        text-align: center;
+        transition: background 200ms ease-in-out,
+                    transform 150ms ease;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+/*animate__fadeInDown*/
+    .dd-span button:hover,
+    .dd-span button:focus {
+        background: #0053ba;
+    }
+
+    .dd-span button:active {
+        transform: scale(0.99);
+    }
+
+
 .dropdown-town {
     display: flex;
-    justify-content: space-between;
+    background-color: var(--bg-accent)!important;
     flex-direction: column;
-    width: 2rem;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 10rem;
+    height: 4.8rem;
+    position: absolute;
+    z-index: 1;
+    transform: translateY(45%);
+    border-radius: 10px;
+}
+
+.dropdown-town button {
+    width: 5rem;
+    border-radius: 10px;
+    /* margin: 2% 0 0; */
+    padding: 2%;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 #modal-form {

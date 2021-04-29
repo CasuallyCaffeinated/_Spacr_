@@ -1,9 +1,6 @@
-import { useParams, Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux"
+
 import { useState } from "react"
 
-
-import { updateUserPhoto } from "../../store/photos"
 
 import "./photo.css"
 import "../../index.css"
@@ -16,39 +13,26 @@ function EditBtn({props}) {
 
     return (
         <div>
-            <span>
-                    <List>
+            <span className="dd-span">
                         <button className="edit-btn" onClick={() => setOpen(!open)}>{<i class="fas fa-edit"></i>}</button>
                         {open && <DropDownMenu props={props} />}
-                    </List>
                 </span>
         </div>
     )
 }
 
-function List(props) {
+// function List(props) {
 
-    return (
-        <ul>
-            <li>
-                {props.children}
-            </li>
-        </ul>
-    )
-}
+//     return (
+//         <ul>
+//             <li>
+//                 {props.children}
+//             </li>
+//         </ul>
+//     )
+// }
 
 function DropDownMenu({props}) {
-
-
-    // function DropDownItems(props) {
-    //     return (
-    //         <Link className="menu-item">
-
-    //             {props.children}
-
-    //         </Link>
-    //     )
-    // }
 
     const [modal, setModal] = useState(false);
 

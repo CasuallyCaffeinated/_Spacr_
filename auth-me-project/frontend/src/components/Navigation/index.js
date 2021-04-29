@@ -5,7 +5,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { useParams } from "react-router-dom";
 import ProfileButton from './ProfileButton';
 import './Navigation.css';
 
@@ -72,7 +71,7 @@ function Navbar(props) {
 <nav className="navbar">
       <span className="logo-container">
         {/* <img>TO ADD: Site's main imgge Logo thing</img> */}
-      <h1 id="logo-text">Spacr</h1>
+      <h1 id="logo-text">Spacr{<i class="fas fa-space-shuttle"></i>}</h1>
       <ul className="navbar-nav-links">
         {props.children}
       </ul>

@@ -28,6 +28,7 @@ function SignupPage() {
     const history = useHistory()
 
     // if (sessionUser) history.push("/");
+    if (sessionUser) history.push(`/profile/${sessionUser.id}`);
 
     const handleSubmit = (e) => {
         e.preventDefault();
