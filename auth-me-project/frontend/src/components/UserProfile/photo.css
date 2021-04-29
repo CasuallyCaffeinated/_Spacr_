@@ -75,6 +75,8 @@ font-family: 'Zen Dots', cursive; */
         margin: 0;
         text-decoration: none;
         background: #0069ed;
+        /* box-shadow: 1px 1px 12px 2px rgba(0, 0, 0, 0.7)!important; */
+        /* border: 2px solid rgba(0, 0, 0, 0.9); */
         color: #ffffff;
         font-family: 'Open Sans', sans-serif;
         font-size: 1rem;
@@ -106,8 +108,10 @@ font-family: 'Zen Dots', cursive; */
     height: 4.8rem;
     position: absolute;
     z-index: 1;
-    transform: translateY(45%);
+    transform: translateY(50%);
     border-radius: 10px;
+    box-shadow: 1px 1px 12px 2px rgba(0, 0, 0, 0.7)!important;
+    border: 2px solid rgba(0, 0, 0, 0.9)
 }
 
 .dropdown-town button {
@@ -152,15 +156,17 @@ font-family: 'Zen Dots', cursive; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     background-color: var(--form-accent);
     border-radius: 3px;
     position: absolute;
     /* transform: translateY(69%);
     transform: translateX(-25%); */
-    transform: translate3d(-2.8rem, 66%, 3rem);
+    transform: translate3d(-2.8rem, 66.5%, 3rem);
     border-radius: 10px;
     z-index: 1;
+    box-shadow: 1px 1px 12px 2px rgba(0, 0, 0, 0.7)!important;
+    border: 2px solid rgba(0, 0, 0, 0.9)
 }
 
 .main-form-body {
@@ -172,8 +178,21 @@ font-family: 'Zen Dots', cursive; */
     height: 50%;
 }
 
-.main-form-body label, input{
+.main-form-body label {
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+
+.main-form-body label, input, textarea{
     display: block;
+}
+
+.main-form-body input, textarea {
+    border-radius: 5px;
+    border: 2px solid black;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    /* outline: 4px solid black; */
 }
 
 .modal-form-btns {
@@ -184,6 +203,8 @@ font-family: 'Zen Dots', cursive; */
 
 #modal-form label {
     font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
 }
 
 
