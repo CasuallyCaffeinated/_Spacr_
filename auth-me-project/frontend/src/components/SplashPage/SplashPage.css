@@ -1,7 +1,4 @@
-/* #main-body {
-    width: 100vw;
-    height: 85vh;
-} */
+
 
 img {
     /* max-width: 100%;
@@ -17,4 +14,27 @@ img {
     background-position: center;
     width: 100%;
     height: fit-content;
+}
+
+.bg-img-outer {
+    background-image: url("https://apod.nasa.gov/apod/image/1510/IC1871_HSTwager.jpg");
+    background-repeat: no-repeat;
+    background-position: cover;
+    background-size: cover;
+    width: 100%;
+    height: 650px;
+    transition: opacity;
+    transition-duration: 0.5s;
+}
+
+.bg-img-inner {
+    background-image: url("https://apod.nasa.gov/apod/image/1609/20160918EdmontonhengeVanzella2048.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: cover;
+    width: 100%;
+    height: 650px;
+    transition: opacity;
+    transition-duration: 0.5s;
+    opacity: 0;
 }

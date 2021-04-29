@@ -12,19 +12,78 @@ import './SplashPage.css'
 import Footer from "../Footer/index"
 import apod2 from "../../imgs/apod2.jpg";
 
+// import images from "./images";
+import images from "./images"
+
 //todo: import all the necessary hooks and actions
 import React from 'react';
+import { useRef, useEffect } from "react";
 // import { useState } from "react";
 // import { useHistory, Link, NavLink } from 'react-router-dom';
 
 function HomePage() {
 
+// console.log(images)
+
+let index = 2;
+let opacity = 0;
+let currentState = "inner";
+
+const outerDiv = useRef();
+const innerDiv = useRef();
+
+const handleFade = (timeout) => {
+
+    if (index < images.length - 1) {
+            if (currentState === "inner") {
+                currentState = "outer"
+                innerDiv.current.style.opacity = 1
+                timeout = setTimeout(() => {
+                    outerDiv.current.style.backgroundImage = `url(${images[index].image_path})`
+                    index += 1
+                    console.log(outerDiv.current.style.backgroundImage);
+                }, 500)
+            } else {
+                currentState = "inner";
+                innerDiv.current.style.opacity = 0;
+                timeout = setTimeout(() => {
+                    innerDiv.current.style.backgroundImage = `url(${images[index].image_path})`
+                    index += 1
+                }, 500)
+            }
+    } else {
+        index = 0
+        handleFade(timeout)
+    }
+}
+
+useEffect(() => {
+
+    let interval;
+    let timeout;
+
+    if (outerDiv && innerDiv) {
+        interval = setInterval(() => {
+        handleFade(timeout)
+        }, 2000)
+    }
+    return () => {
+        clearInterval(interval)
+        clearTimeout(timeout)
+    }
+}, [outerDiv, innerDiv])
 
     return (
         <div>
-            {/* <div id="main-body"> */}
-            <img src={apod2} alt="APOD" />
-            {/* </div> */}
+                <div
+                className="bg-img-outer"
+                ref={outerDiv}>
+                    <div
+                    className="bg-img-inner"
+                    ref={innerDiv}>
+
+                    </div>
+                </div>
             <Footer />
         </div>
     )

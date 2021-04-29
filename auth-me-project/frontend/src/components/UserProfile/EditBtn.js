@@ -5,6 +5,7 @@ import { useState } from "react"
 import "./photo.css"
 import "../../index.css"
 import ModalForm from "./modalForm";
+import DeletePopUp from "./deletePopUp";
 
 
 //////////* EDIT BTN COMPONENT *//////////
@@ -46,11 +47,18 @@ function DropDownMenu({props}) {
     //? THIS IS FOR MANAGING THE STATE OF THE APPLICATION
     const [fadeInDown, setFadeInDown] = useState(true);
 
-    //? THIS IS FOR ALLOWING THE MODAL TO APPEAR
+    //? THIS IS FOR ALLOWING THE -- EDIT PICTURE -- MODAL TO APPEAR
     const [modal, setModal] = useState(false);
+    //? THIS IS FOR ALLOWING THE -- DELETE PICTURE -- MODAL TO APPEAR
+    const [deleteModal, setDeleteModal] = useState(false);
+
 
     const modalGenerate = () => {
             setModal(!modal)
+    }
+
+    const deleteModalGenerate = () => {
+        setDeleteModal(!deleteModal)
     }
 
     return (
@@ -59,9 +67,12 @@ function DropDownMenu({props}) {
        fadeInDown={fadeInDown}
        className="dropdown-town fadeInDown">
             {modal ? <ModalForm props={{setModal, id: props}} /> : null}
+            {deleteModal ? <DeletePopUp props={{setDeleteModal, id: props}} /> : null}
             <button
             onClick={modalGenerate}>Edit</button>
-            <button id="red-btn">Delete</button>
+            <button
+            onClick={deleteModalGenerate}
+            id="red-btn">Delete</button>
        </div>
     )
 }
