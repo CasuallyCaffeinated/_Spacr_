@@ -28,6 +28,8 @@ function ModalForm({props}) {
 
     return (
         <form id="modal-form" onSubmit={handleSubmit}>
+            <div className="main-form-body">
+            <div className="label"></div>
             <label>
                 Title
                 <input
@@ -43,6 +45,7 @@ function ModalForm({props}) {
                 onChange={(e) => setDescription(e.target.value)}
                 />
             </label>
+            </div>
             <div className="modal-form-btns">
             <button>Save Changes</button>
             <button onClick={() => setModal(false)}>Cancel</button>

@@ -11,10 +11,26 @@ function EditBtn({props}) {
 
     const [ open, setOpen ] = useState(false);
 
+    //? useState for CSS animation:
+    const [fadeInDown, setFadeInDown] = useState(0);
+
+    const handleClick = () => {
+        setOpen(!open)
+        setFadeInDown(1)
+    }
+
+
     return (
         <div>
             <span className="dd-span">
-                        <button className="edit-btn" onClick={() => setOpen(!open)}>{<i class="fas fa-edit"></i>}</button>
+                        <button
+                        className="edit-btn"
+                        onClick={handleClick}
+                        onAnimationEnd={() => setFadeInDown(0)}
+                        fadeInDown={fadeInDown}
+                        >
+                        {<i class="fas fa-edit"></i>}
+                        </button>
                         {open && <DropDownMenu props={props} />}
                 </span>
         </div>
@@ -44,7 +60,7 @@ function DropDownMenu({props}) {
        <div className="dropdown-town">
             {modal ? <ModalForm props={{setModal, id: props}} /> : null}
             <button onClick={modalGenerate}>Edit</button>
-            <button>Delete</button>
+            <button id="red-btn">Delete</button>
        </div>
     )
 }

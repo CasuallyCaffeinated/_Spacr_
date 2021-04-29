@@ -76,7 +76,7 @@ font-family: 'Zen Dots', cursive; */
         text-decoration: none;
         background: #0069ed;
         color: #ffffff;
-        font-family: sans-serif;
+        font-family: 'Open Sans', sans-serif;
         font-size: 1rem;
         cursor: pointer;
         text-align: center;
@@ -85,7 +85,7 @@ font-family: 'Zen Dots', cursive; */
         -webkit-appearance: none;
         -moz-appearance: none;
     }
-/*animate__fadeInDown*/
+
     .dd-span button:hover,
     .dd-span button:focus {
         background: #0053ba;
@@ -118,16 +118,62 @@ font-family: 'Zen Dots', cursive; */
     font-family: 'Ubuntu', sans-serif;
 }
 
+.dd-span #red-btn {
+    display: inline-block;
+    border: none;
+    border-radius: 10px;
+    /* padding: 0.5rem 1rem; */
+    margin: 0;
+    text-decoration: none;
+    background:#d9534f;
+    color: #ffffff;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background 200ms ease-in-out,
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.dd-span #red-btn:hover,
+.dd-span #red-btn:focus {
+    background: #db322c;
+}
+
+.dd-span #red-btn:active {
+    transform: scale(0.99);
+}
+
 #modal-form {
-    height: 200px;
-    width: 250px;
+    height: 15rem;
+    width: 21rem;
     display: flex;
     flex-direction: column;
-    background-color: pink;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--form-accent);
     border-radius: 3px;
     position: absolute;
-    left: 15%;
+    /* transform: translateY(69%);
+    transform: translateX(-25%); */
+    transform: translate3d(-2.8rem, 66%, 3rem);
+    border-radius: 10px;
     z-index: 1;
+}
+
+.main-form-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+}
+
+.main-form-body label, input{
+    display: block;
 }
 
 .modal-form-btns {
@@ -135,3 +181,24 @@ font-family: 'Zen Dots', cursive; */
     justify-content: space-around;
     width: 100%;
 }
+
+#modal-form label {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/* .dow[fadeInDown="1"] {
+  animation: fadeInDown 1s 1;
+}
+
+@keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  } */
