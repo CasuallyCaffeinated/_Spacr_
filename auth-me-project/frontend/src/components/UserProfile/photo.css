@@ -56,3 +56,30 @@ font-family: 'Zen Dots', cursive; */
     border-radius: 10px;
     padding: 0.5rem;
 }
+
+
+/* DROPDOWN */
+.dropdown-town {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 2rem;
+}
+
+#modal-form {
+    height: 200px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    background-color: pink;
+    border-radius: 3px;
+    position: absolute;
+    left: 15%;
+    z-index: 1;
+}
+
+.modal-form-btns {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}

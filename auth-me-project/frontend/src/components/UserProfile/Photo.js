@@ -9,7 +9,7 @@ console.log(image);
                 <div className="image-container">
                         <div className="heading-container">
                             <h3 className="heading title">{image.title}</h3>
-                            <EditBtn />
+                            <EditBtn props={image.id} />
                         </div>
                             <img
                             className="images-space"

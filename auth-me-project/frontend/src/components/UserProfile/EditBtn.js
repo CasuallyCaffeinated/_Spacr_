@@ -3,33 +3,65 @@ import { useDispatch, useSelector } from "react-redux"
 import { useState } from "react"
 
 
-// import { updateUserPhoto } from "../../store/photos"
+import { updateUserPhoto } from "../../store/photos"
 
 import "./photo.css"
 import "../../index.css"
+import ModalForm from "./modalForm";
 
-function EditBtn() {
+function EditBtn({props}) {
+
 
     const [ open, setOpen ] = useState(false);
 
     return (
         <div>
             <span>
-                <ul>
-                    <li>
+                    <List>
                         <button className="edit-btn" onClick={() => setOpen(!open)}>{<i class="fas fa-edit"></i>}</button>
-                        {open && <DropDownMenu />}
-                    </li>
-                </ul>
+                        {open && <DropDownMenu props={props} />}
+                    </List>
                 </span>
         </div>
     )
 }
 
-function DropDownMenu(props) {
+function List(props) {
 
     return (
-       <h1>Hello</h1>
+        <ul>
+            <li>
+                {props.children}
+            </li>
+        </ul>
+    )
+}
+
+function DropDownMenu({props}) {
+
+
+    // function DropDownItems(props) {
+    //     return (
+    //         <Link className="menu-item">
+
+    //             {props.children}
+
+    //         </Link>
+    //     )
+    // }
+
+    const [modal, setModal] = useState(false);
+
+    const modalGenerate = () => {
+            setModal(!modal)
+    }
+
+    return (
+       <div className="dropdown-town">
+            {modal ? <ModalForm props={{setModal, id: props}} /> : null}
+            <button onClick={modalGenerate}>Edit</button>
+            <button>Delete</button>
+       </div>
     )
 }
 
