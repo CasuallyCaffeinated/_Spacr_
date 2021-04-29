@@ -6,10 +6,14 @@ import { useState } from "react"
 import { updateUserPhoto } from "../../store/photos";
 
 function ModalForm({props}) {
+
     const { setModal, id } = props;
 
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
+    // const [fadeInDown2, setFadeInDown] = useState(true);
+
+
     const dispatch = useDispatch()
 
 
@@ -27,7 +31,7 @@ function ModalForm({props}) {
     }
 
     return (
-        <form id="modal-form" onSubmit={handleSubmit}>
+            <form id="modal-form" onSubmit={handleSubmit}>
             <div className="main-form-body">
             <div className="label"></div>
             <label>
@@ -51,6 +55,8 @@ function ModalForm({props}) {
             <button onClick={() => setModal(false)}>Cancel</button>
             </div>
         </form>
+
+
     )
 }
 
