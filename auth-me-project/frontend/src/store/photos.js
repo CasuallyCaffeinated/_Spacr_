@@ -75,7 +75,9 @@ const photoReducer = (state = {}, action) => {
                 return newState;
             }
             case DELETE_USER_PHOTO: {
-                const 
+                const newState = { ...state };
+                delete newState[action.photoErased]
+                return newState;
             }
         default:
             return state
