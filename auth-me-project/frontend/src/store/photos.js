@@ -49,8 +49,8 @@ export const updateUserPhoto = (payload) => async dispatch => {
     }
 }
 
-export const deleteUserPhoto = (payload) => async dispatch => {
-    const response = await csrfFetch(`/api/users/photo/${payload.id}`, {
+export const deleteUserPhoto = (photo) => async dispatch => {
+    await csrfFetch(`/api/users/photo/${photo.id}`, {
         method: "DELETE"
     })
     dispatch(removeImg())
@@ -71,7 +71,7 @@ const photoReducer = (state = {}, action) => {
                     ...state,
                     [action.photoPayload.id]: action.photoPayload
                 }
-                console.log(newState);
+                // console.log(newState);
                 return newState;
             }
             case DELETE_USER_PHOTO: {
