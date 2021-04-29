@@ -23,5 +23,7 @@
     "url": "https://github.com/Christian-Cozma/auth-me-project/issues"
   },
   "homepage": "https://github.com/Christian-Cozma/auth-me-project#readme",
-  "dependencies": {}
+  "dependencies": {
+    "animate.css": "^4.1.1"
+  }
 }

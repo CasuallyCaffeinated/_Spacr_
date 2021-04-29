@@ -15,14 +15,16 @@ body, ul, div, nav {
 :root {
     --bg: #242526;
     --bg-accent: #484A4D;
+    --form-accent:#c08efa;
     --text-color: #DADCE1;
     --nav-size: 60px;
     --border: 1px solid #474A4D;
     --border-radius: 8px;
     --speed: 500ms;
+    --warning-color: #d9534f;
 }
 
-body, ul, div, nav {
+body, ul, div, nav, h1 {
     padding: 0px;
     margin: 0px;
 }

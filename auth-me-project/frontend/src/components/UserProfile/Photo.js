@@ -1,12 +1,16 @@
 import "./photo.css"
 
+import EditBtn from "./EditBtn";
+
 function Photo({image}) {
 console.log(image);
     return (
         <>
                 <div className="image-container">
+                        <div className="heading-container">
                             <h3 className="heading title">{image.title}</h3>
-                            <span>{<i class="fas fa-edit"></i>}</span>
+                            <EditBtn props={image.id} />
+                        </div>
                             <img
                             className="images-space"
                             src={image.photoUrl}

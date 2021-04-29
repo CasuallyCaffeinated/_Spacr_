@@ -98,19 +98,19 @@ module.exports = {
       */
      const Op = Sequelize.Op;
    return queryInterface.bulkDelete('Photos', {
-      title: {
-        [Op.in]: ['X-Rays Indicate Star Ripped Up by Black Hole',
-        'Sirius: The Brightest Star in the Night',
-        'Proxima Centauri: The Closest Star',
-        'Polaris: The North Star',
-        'M2-9: Wings of a Butterfly Nebula',
-        'Crab Nebula Mosaic from HST',
-        'A Primordial Quasar',
-        'The Heart and Soul Nebulas',
-        'IC 1396 H-Alpha Close-Up',
-        'An Orion Deep Field',
-        'A Fox Fur, a Unicorn, and a Christmas Tree']
-      }
+      // title: {
+      //   [Op.in]: ['X-Rays Indicate Star Ripped Up by Black Hole',
+      //   'Sirius: The Brightest Star in the Night',
+      //   'Proxima Centauri: The Closest Star',
+      //   'Polaris: The North Star',
+      //   'M2-9: Wings of a Butterfly Nebula',
+      //   'Crab Nebula Mosaic from HST',
+      //   'A Primordial Quasar',
+      //   'The Heart and Soul Nebulas',
+      //   'IC 1396 H-Alpha Close-Up',
+      //   'An Orion Deep Field',
+      //   'A Fox Fur, a Unicorn, and a Christmas Tree']
+      // }
    });
   }
 };
