@@ -88,7 +88,7 @@ router.put (
   "/photo/:photoId",
   asyncHandler(async (req, res) => {
      const { photoId } = req.params
-     
+
       const { title, description } = req.body
 
      const photo = await Photo.findByPk(photoId)
@@ -99,6 +99,28 @@ router.put (
 
      res.json(photo)
   })
+)
+
+//? Route for deleting a photo from a user's profile
+router.delete (
+  "/photo/:photoId",
+    asyncHandler(async (req, res) => {
+
+      const { photoId } = req.params
+
+      const image = await Photo.findByPk(photoId);
+
+      if(!image) {
+        return res.status(401).send({
+            message: `The photo could not be found!`
+        })
+      } else {
+        await image.destroy()
+        res.json({ message: "Deletion successful", id: photoId });
+      }
+
+
+    })
 )
 
 module.exports = router;
