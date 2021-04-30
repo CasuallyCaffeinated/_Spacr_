@@ -11,7 +11,7 @@ const DELETE_USER_PHOTO = "photos/deleteUserPhoto"
 
 ////////////* ACTION CREATORS */////////////////
 
-const addUserPhoto = (photo) => ({
+const addPhoto = (photo) => ({
     type: ADD_USER_PHOTO,
     photoEntry: photo
 })
@@ -55,7 +55,7 @@ export const addUserPhoto = (photoEntry) => async dispatch => {
 
         if (res.ok) {
             const photoEntry = await res.json()
-            dispatch(addUserPhoto(photoEntry))
+            dispatch(addPhoto(photoEntry))
         }
 }
 
@@ -119,7 +119,7 @@ const photoReducer = (state = {}, action) => {
             case ADD_USER_PHOTO: {
                 const newState = { ...state };
                 newState[action.photoEntry.id] = action.photoEntry
-                return newState; 
+                return newState;
             }
         default:
             return state
