@@ -1,5 +1,14 @@
 /* TODO Add site wide styles */
 
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Merriweather:wght@300;400&family=Open+Sans:wght@300&family=Ubuntu:wght@300;400&family=Zen+Dots&display=swap');
+
+/* font-family: 'Lora', serif;
+font-family: 'Merriweather', serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+font-family: 'Zen Dots', cursive; */
+
+
 * {
     box-sizing: border-box;
 

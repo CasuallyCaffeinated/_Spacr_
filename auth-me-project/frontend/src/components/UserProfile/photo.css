@@ -122,7 +122,7 @@ font-family: 'Zen Dots', cursive; */
     font-family: 'Ubuntu', sans-serif;
 }
 
-.dd-span #red-btn {
+.dd-span #red-btn, #delete-btn {
     display: inline-block;
     border: none;
     border-radius: 10px;
@@ -143,13 +143,14 @@ font-family: 'Zen Dots', cursive; */
 
 .dd-span #red-btn:hover,
 .dd-span #red-btn:focus {
-    background: #db322c;
+    background: #d40700;
 }
 
-.dd-span #red-btn:active {
+.dd-span #red-btn:active{
     transform: scale(0.99);
 }
 
+/* EDIT PICTURE MODAL */
 #modal-form {
     height: 15rem;
     width: 21rem;
@@ -167,6 +168,69 @@ font-family: 'Zen Dots', cursive; */
     z-index: 1;
     box-shadow: 1px 1px 12px 2px rgba(0, 0, 0, 0.7)!important;
     border: 2px solid rgba(0, 0, 0, 0.9)
+}
+
+/* DELETE MODAL */
+#delete-modal {
+    height: 5rem;
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--form-accent);
+    border-radius: 3px;
+    position: absolute;
+    /* transform: translateY(69%);
+    transform: translateX(-25%); */
+    transform: translate3d(-10rem, 100%, 3rem);
+    border-radius: 10px;
+    z-index: 1;
+    box-shadow: 1px 1px 12px 2px rgba(0, 0, 0, 0.7)!important;
+    border: 2px solid rgba(0, 0, 0, 0.9)
+}
+
+#modal-body {
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    width: auto;
+}
+
+#modal-body label {
+    width: 30rem;
+    height: 5rem;
+    font-family: 'Merriweather', serif;
+    display: flex;
+    margin-top: 1rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#delete-btns {
+    display: flex;;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* width: 30rem; */
+    height: 4rem;;
+}
+
+/* #delete-btn:focus {
+    background: #d40700;
+} */
+
+#delete-modal button {
+    height: 2rem;
+    width: auto;
+    margin: 0.5rem 1rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 0 0.2rem;
 }
 
 .main-form-body {

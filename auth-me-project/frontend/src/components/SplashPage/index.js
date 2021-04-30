@@ -18,6 +18,7 @@ import images from "./images"
 //todo: import all the necessary hooks and actions
 import React from 'react';
 import { useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 // import { useState } from "react";
 // import { useHistory, Link, NavLink } from 'react-router-dom';
 
@@ -83,6 +84,10 @@ useEffect(() => {
                     ref={innerDiv}>
 
                     </div>
+                </div>
+                <div id="welcome-div">
+                <h1 id="welcome-msg">Welcome to Spacr!</h1>
+                <button id="hp-pg__sign-up-btn"><Link key="h-pg__sign-up-btn" to="/signup">Sign up, Space Cowboy</Link></button>
                 </div>
             <Footer />
         </div>
