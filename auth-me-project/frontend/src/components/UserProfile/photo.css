@@ -287,3 +287,11 @@ font-family: 'Zen Dots', cursive; */
       transform: translate3d(0, 50%, 0);
     }
   }
+
+
+/* ADD IMAGE MODAL STARTS HERE */
+.add-img-modal {
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+}
