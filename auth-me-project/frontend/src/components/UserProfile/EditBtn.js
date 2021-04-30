@@ -55,10 +55,12 @@ function DropDownMenu({props}) {
 
     const modalGenerate = () => {
             setModal(!modal)
+            setDeleteModal(false)
     }
 
     const deleteModalGenerate = () => {
         setDeleteModal(!deleteModal)
+        setModal(false)
     }
 
     return (
