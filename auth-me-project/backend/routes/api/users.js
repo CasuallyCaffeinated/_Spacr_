@@ -40,7 +40,24 @@ const validateSignup = [
     handleValidationErrors,
   ];
 
-  const validatePhoto =
+  //TODO: VALIDATION ERRORS FOR CREATING A PHOTO
+  //? Validate photo entry:
+
+//* The description can be empty and the user Id is generated automatically. Therefore, they aren't added in the validator. 
+  const validatePhotoEntry = [
+    check('title')
+    .notEmpty()
+    .withMessage(`Please provide a title for your photo`),
+    check(`category`)
+    .notEmpty()
+    .withMessage(`Please provide a category for your photo`),
+    check(`photoUrl`)
+    .notEmpty()
+    .withMessage(`Please provide a URL path for your photo`),
+    check('authorCredited')
+    .notEmpty()
+    .withMessage(`Please provide a title for your photo`),
+  ]
 
   ////////////////////////////////////* API ENDPOINTS *//////////////////////////////
 
