@@ -11,7 +11,9 @@ import "./photo.css"
 function UserProfile() {
     const dispatch = useDispatch()
     const photos = useSelector(state => state.photo)
+    const user = useSelector(state => state.session.user)
 
+    console.log("THIS IS THE USER:", user);
     const { id } = useParams()
 
     useEffect(() => {
@@ -22,7 +24,7 @@ function UserProfile() {
 
     return (
         <>
-        <h1>Welcome!</h1>
+        <h1>Welcome to your profile {user.firstName}!</h1>
         <div id="master-div">
                         {
                         Object.values(photos).map(image => <Photo key={image.id} image={image} />)
