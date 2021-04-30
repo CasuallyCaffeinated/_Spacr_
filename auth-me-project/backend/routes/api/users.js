@@ -43,7 +43,7 @@ const validateSignup = [
   //TODO: VALIDATION ERRORS FOR CREATING A PHOTO
   //? Validate photo entry:
 
-//* The description can be empty and the user Id is generated automatically. Therefore, they aren't added in the validator. 
+//* The description can be empty and the user Id is generated automatically. Therefore, they aren't added in the validator.
   const validatePhotoEntry = [
     check('title')
     .notEmpty()
@@ -94,6 +94,7 @@ router.post(
 //? Route to create a new photo that will belong to a user:
 router.post (
   "/photo/:photoId",
+  validatePhotoEntry,
   requireAuth,
   asyncHandler(async(req, res) => {
 
