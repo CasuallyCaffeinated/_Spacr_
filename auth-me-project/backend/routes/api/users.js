@@ -68,9 +68,15 @@ router.post(
 
 //////////////////////////////////////////* PHOTOS /////////////////////////////////////////
 
-//? Route to render all photo that belong to a user:
+//? Route to create a new photo that will belong to a user:
+// router.post (
+//   ""
+// )
+
+//? Route to render all photos that belong to a user:
 router.get (
   '/photos/:userId',
+  requireAuth,
   asyncHandler(async(req, res) => {
     const { userId } = req.params
 
@@ -86,6 +92,7 @@ router.get (
 //? Route to update a photo on a user's profile
 router.put (
   "/photo/:photoId",
+  requireAuth,
   asyncHandler(async (req, res) => {
      const { photoId } = req.params
 
