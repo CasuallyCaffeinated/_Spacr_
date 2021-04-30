@@ -33,44 +33,49 @@ let currentState = "inner";
 const outerDiv = useRef();
 const innerDiv = useRef();
 
-const handleFade = (timeout) => {
+const handleFade = (timeoutOne, timeoutTwo) => {
 
-    if (index < images.length - 1) {
+
             if (currentState === "inner") {
+                if (index > images.length - 1) {
+                        index = 0;
+                }
                 currentState = "outer"
                 innerDiv.current.style.opacity = 1
-                timeout = setTimeout(() => {
+                timeoutOne = setTimeout(() => {
                     outerDiv.current.style.backgroundImage = `url(${images[index].image_path})`
                     index += 1
                     // console.log(outerDiv.current.style.backgroundImage);
-                }, 2500)
+                }, 3000)
             } else {
+                if (index > images.length - 1) {
+                    index = 0;
+                }
                 currentState = "inner";
                 innerDiv.current.style.opacity = 0;
-                timeout = setTimeout(() => {
+                timeoutTwo = setTimeout(() => {
                     innerDiv.current.style.backgroundImage = `url(${images[index].image_path})`
                     index += 1
-                }, 2500)
+                }, 3000)
             }
-    } else {
-        index = 0
-        handleFade(timeout)
-    }
+
 }
 
 useEffect(() => {
 
     let interval;
-    let timeout;
+    let timeoutOne;
+    let timeoutTwo;
 
     if (outerDiv && innerDiv) {
         interval = setInterval(() => {
-        handleFade(timeout)
+        handleFade(timeoutOne, timeoutTwo)
         }, 4000)
     }
     return () => {
         clearInterval(interval)
-        clearTimeout(timeout)
+        clearTimeout(timeoutOne)
+        clearTimeout(timeoutTwo)
     }
 }, [outerDiv, innerDiv])
 
