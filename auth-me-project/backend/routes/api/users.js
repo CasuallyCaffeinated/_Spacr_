@@ -10,6 +10,8 @@ const { User, Photo } = require("../../db/models");
 
 const router = express.Router();
 
+////////////////////////////////* EXPRESS VALIDATIONS *///////////////////////
+
 //TODO: Validation Error handling for Signup:
 //? Validate Sign Up:
 const validateSignup = [
@@ -38,7 +40,28 @@ const validateSignup = [
     handleValidationErrors,
   ];
 
-//TODO: USer Sign up API Route
+  //TODO: VALIDATION ERRORS FOR CREATING A PHOTO
+  //? Validate photo entry:
+
+//* The description can be empty and the user Id is generated automatically. Therefore, they aren't added in the validator.
+  const validatePhotoEntry = [
+    check('title')
+    .notEmpty()
+    .withMessage(`Please provide a title for your photo`),
+    check(`category`)
+    .notEmpty()
+    .withMessage(`Please provide a category for your photo`),
+    check(`photoUrl`)
+    .notEmpty()
+    .withMessage(`Please provide a URL path for your photo`),
+    check('authorCredited')
+    .notEmpty()
+    .withMessage(`Please provide a title for your photo`),
+  ]
+
+  ////////////////////////////////////* API ENDPOINTS *//////////////////////////////
+
+//TODO: User Sign up API Route
 //TODO: POST /api/users
 
 //? Sign up:
@@ -69,9 +92,27 @@ router.post(
 //////////////////////////////////////////* PHOTOS /////////////////////////////////////////
 
 //? Route to create a new photo that will belong to a user:
-// router.post (
-//   ""
-// )
+router.post (
+  "/photo/:photoId",
+  validatePhotoEntry,
+  requireAuth,
+  asyncHandler(async(req, res) => {
+
+    const { title, category, description, photoUrl, authorCredited, userId } = req.body;
+
+    const newImg = await Photo.create (
+      title,
+      category,
+      description,
+      photoUrl,
+      authorCredited,
+      userId
+    )
+
+    const photoData = await Photo.findByPk(newImg.id)
+    return res.json(photoData);
+  })
+)
 
 //? Route to render all photos that belong to a user:
 router.get (

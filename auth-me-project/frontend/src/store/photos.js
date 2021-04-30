@@ -1,5 +1,7 @@
 import { csrfFetch } from "./csrf";
 
+//* CREATE
+const ADD_USER_PHOTO = "photos/addUserPhoto";
 //* READ:
 const GET_USER_PHOTOS = "photos/getUserPhotos"
 //* UPDATE:
@@ -9,6 +11,10 @@ const DELETE_USER_PHOTO = "photos/deleteUserPhoto"
 
 ////////////* ACTION CREATORS */////////////////
 
+const addUserPhoto = (photo) => ({
+    type: ADD_USER_PHOTO,
+    photoEntry: photo
+})
 
 const setUserPhotos = (photos) => ({
     type: GET_USER_PHOTOS,
@@ -27,6 +33,33 @@ const removeImg = photoId => ({
 
 
 ////////////* THUNK ACTION CREATOR *////////////////////
+//! ASK ABOUT THIS:
+// body: JSON.stringify({
+//     title,
+//     category,
+//     description,
+//     photoUrl,
+//     authorCredited,
+//     userId
+// }),
+
+//? CREATE
+export const addUserPhoto = (photoEntry) => async dispatch => {
+        const res = await csrfFetch(`/api/users/photo/${photoEntry.id}`, {
+            method: "POST",
+            body: JSON.stringify(photoEntry),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+
+        if (res.ok) {
+            const photoEntry = await res.json()
+            dispatch(addUserPhoto(photoEntry))
+        }
+}
+
+//? READ
 export const getUserPhotos = (id) => async dispatch => {
         const res = await csrfFetch(`/api/users/photos/${id}`)
         if (res.ok) {
@@ -35,6 +68,7 @@ export const getUserPhotos = (id) => async dispatch => {
         }
 }
 
+//? UPDATE
 export const updateUserPhoto = (payload) => async dispatch => {
     const response = await csrfFetch(`/api/users/photo/${payload.id}`, {
         method: `PUT`,
@@ -49,6 +83,7 @@ export const updateUserPhoto = (payload) => async dispatch => {
     }
 }
 
+//? DELETE
 export const deleteUserPhoto = (photo) => async dispatch => {
     const response = await csrfFetch(`/api/users/photo/${photo.id}`, {
         method: "DELETE"
@@ -80,6 +115,11 @@ const photoReducer = (state = {}, action) => {
                 const newState = { ...state };
                 delete newState[action.photoErased]
                 return newState;
+            }
+            case ADD_USER_PHOTO: {
+                const newState = { ...state };
+                newState[action.photoEntry.id] = action.photoEntry
+                return newState; 
             }
         default:
             return state
