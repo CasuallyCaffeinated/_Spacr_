@@ -1,8 +1,11 @@
 import { csrfFetch } from "./csrf";
 
+//* READ:
 const GET_USER_PHOTOS = "photos/getUserPhotos"
+//* UPDATE:
 const UPDATE_USER_PHOTO = "photos/updateUserPhoto"
-
+//* DELETE:
+const DELETE_USER_PHOTO = "photos/deleteUserPhoto"
 
 ////////////* ACTION CREATORS */////////////////
 
@@ -15,6 +18,11 @@ const setUserPhotos = (photos) => ({
 const updateImg = photo => ({
     type: UPDATE_USER_PHOTO,
     photoPayload: photo
+})
+
+const removeImg = photoId => ({
+    type: DELETE_USER_PHOTO,
+    photoErased: photoId
 })
 
 
@@ -41,6 +49,15 @@ export const updateUserPhoto = (payload) => async dispatch => {
     }
 }
 
+export const deleteUserPhoto = (photo) => async dispatch => {
+    const response = await csrfFetch(`/api/users/photo/${photo.id}`, {
+        method: "DELETE"
+    })
+    if(response.ok) {
+        dispatch(removeImg(photo.id))
+    }
+}
+
 ////////////////////////////* REDUCER *///////////////////////////
 const photoReducer = (state = {}, action) => {
     switch (action.type) {
@@ -56,7 +73,12 @@ const photoReducer = (state = {}, action) => {
                     ...state,
                     [action.photoPayload.id]: action.photoPayload
                 }
-                console.log(newState);
+                // console.log(newState);
+                return newState;
+            }
+            case DELETE_USER_PHOTO: {
+                const newState = { ...state };
+                delete newState[action.photoErased]
                 return newState;
             }
         default:
