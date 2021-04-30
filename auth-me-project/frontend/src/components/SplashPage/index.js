@@ -10,7 +10,7 @@
 //* HOMEPAGE COMPONENT *//
 import './SplashPage.css'
 import Footer from "../Footer/index"
-import apod2 from "../../imgs/apod2.jpg";
+// import apod2 from "../../imgs/apod2.jpg";
 
 // import images from "./images";
 import images from "./images"
@@ -41,15 +41,15 @@ const handleFade = (timeout) => {
                 timeout = setTimeout(() => {
                     outerDiv.current.style.backgroundImage = `url(${images[index].image_path})`
                     index += 1
-                    console.log(outerDiv.current.style.backgroundImage);
-                }, 500)
+                    // console.log(outerDiv.current.style.backgroundImage);
+                }, 2500)
             } else {
                 currentState = "inner";
                 innerDiv.current.style.opacity = 0;
                 timeout = setTimeout(() => {
                     innerDiv.current.style.backgroundImage = `url(${images[index].image_path})`
                     index += 1
-                }, 500)
+                }, 2500)
             }
     } else {
         index = 0
@@ -65,7 +65,7 @@ useEffect(() => {
     if (outerDiv && innerDiv) {
         interval = setInterval(() => {
         handleFade(timeout)
-        }, 2000)
+        }, 4000)
     }
     return () => {
         clearInterval(interval)

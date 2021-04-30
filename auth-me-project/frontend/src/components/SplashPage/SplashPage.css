@@ -22,19 +22,19 @@ img {
     background-position: cover;
     background-size: cover;
     width: 100%;
-    height: 650px;
+    height: 40rem;
     transition: opacity;
-    transition-duration: 0.5s;
+    transition-duration: 3s;
 }
 
 .bg-img-inner {
-    background-image: url("https://apod.nasa.gov/apod/image/1609/20160918EdmontonhengeVanzella2048.jpg");
+    background-image: url("https://apod.nasa.gov/apod/image/2103/VolcanoStars_Vella_1920.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: cover;
     width: 100%;
     height: 650px;
     transition: opacity;
-    transition-duration: 0.5s;
+    transition-duration: 3s;
     opacity: 0;
 }
