@@ -10,6 +10,8 @@ const { User, Photo } = require("../../db/models");
 
 const router = express.Router();
 
+////////////////////////////////* EXPRESS VALIDATIONS *///////////////////////
+
 //TODO: Validation Error handling for Signup:
 //? Validate Sign Up:
 const validateSignup = [
@@ -38,7 +40,11 @@ const validateSignup = [
     handleValidationErrors,
   ];
 
-//TODO: USer Sign up API Route
+  const validatePhoto =
+
+  ////////////////////////////////////* API ENDPOINTS *//////////////////////////////
+
+//TODO: User Sign up API Route
 //TODO: POST /api/users
 
 //? Sign up:
@@ -69,9 +75,26 @@ router.post(
 //////////////////////////////////////////* PHOTOS /////////////////////////////////////////
 
 //? Route to create a new photo that will belong to a user:
-// router.post (
-//   ""
-// )
+router.post (
+  "/photo/:photoId",
+  requireAuth,
+  asyncHandler(async(req, res) => {
+
+    const { title, category, description, photoUrl, authorCredited, userId } = req.body;
+
+    const newImg = await Photo.create (
+      title,
+      category,
+      description,
+      photoUrl,
+      authorCredited,
+      userId
+    )
+
+    const photoData = await Photo.findByPk(newImg.id)
+    return res.json(photoData);
+  })
+)
 
 //? Route to render all photos that belong to a user:
 router.get (

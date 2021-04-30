@@ -13,7 +13,7 @@ function UserProfile() {
     const photos = useSelector(state => state.photo)
     const user = useSelector(state => state.session.user)
 
-    console.log("THIS IS THE USER:", user);
+    // console.log("THIS IS THE USER:", user);
     const { id } = useParams()
 
     useEffect(() => {
