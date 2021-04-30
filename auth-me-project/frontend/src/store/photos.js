@@ -45,7 +45,7 @@ const removeImg = photoId => ({
 
 //? CREATE
 export const addUserPhoto = (photoEntry) => async dispatch => {
-        const res = await csrfFetch(`/api/users/photo/${photoEntry.id}`, {
+        const res = await csrfFetch(`/api/users/photo/`, {
             method: "POST",
             body: JSON.stringify(photoEntry),
             headers: {

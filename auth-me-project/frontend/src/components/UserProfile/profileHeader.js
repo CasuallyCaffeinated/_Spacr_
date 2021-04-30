@@ -25,10 +25,7 @@ const CATEGORIES = [
     "Local Group",
     "The Milky Way",
     "Spiral Galaxy",
-    "Dark Nebula",
-    "Emission Nebula",
-    "Planetary Nebula",
-    "Reflection Nebula",
+    "Nebula",
     "Supernova Remnants",
     "Quasar",
     "Active Galactic Nuclei",
@@ -59,14 +56,14 @@ function ProfileHeader() {
                 </div>
                 <div className="add-pic-div">
                     <ul>
+                        <li>Add a photo</li>
                         <li>
                             <button
                             className="show-add-modal"
                             onClick={handleClick}
                             ><i class="fas fa-plus-square"></i></button>
-                            {open && <AddImgModal />}
+                            {open && <AddImgModal props={handleClick}/>}
                         </li>
-                        <li>Add a photo</li>
                     </ul>
                 </div>
             </div>
@@ -74,13 +71,15 @@ function ProfileHeader() {
     )
 }
 
-function AddImgModal() {
+function AddImgModal({props}) {
+
+    const handleClick = props;
 
     const dispatch = useDispatch();
 
     const { id } = useParams();
 
-    const [addImgModal, setAddImgModal] = useState(false);
+    // const [addImgModal, setAddImgModal] = useState(false);
 
     const [title, setTitle] = useState('')
     const [category, setCategory] = useState('')
@@ -89,9 +88,9 @@ function AddImgModal() {
     const [authorCredited, setAuthorCredited] = useState('')
 
 
-    const handleClick = () => {
-            setAddImgModal(false)
-        };
+    // const handleClick = () => {
+    //         setOpen(false)
+    //     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -106,13 +105,12 @@ function AddImgModal() {
         }
 
         dispatch(addUserPhoto(formData))
-        setAddImgModal(false);
     }
 
     return (
         <div>
             <div className="add-img-modal">
-                {addImgModal ? <AddImgModal /> : null}
+                {/* {open ? <AddImgModal /> : null} */}
                 <form id="add-img-form" onSubmit={handleSubmit}>
                         <div className="main-add-img-modal-body">
                             <label>
@@ -121,7 +119,6 @@ function AddImgModal() {
                                 type="text"
                                 value={title}
                                 onChange={(e) => setTitle(e.target.value)}
-                                required
                                 />
                             </label>
                             <label>
@@ -139,6 +136,30 @@ function AddImgModal() {
                                     </option>
                                 ))}
                                 </select>
+                            </label>
+                            <label>
+                                    Description
+                                    <textarea
+                                    type="text"
+                                    value={description}
+                                    onChange={(e) => setDescription(e.target.value)}
+                                     />
+                            </label>
+                            <label>
+                                Image URL
+                                <input
+                                type="text"
+                                value={photoUrl}
+                                onChange={(e) => setPhotoUrl(e.target.value)}
+                                />
+                            </label>
+                            <label>
+                                Illustrator/Creator Credited
+                                <input
+                                type="text"
+                                value={authorCredited}
+                                onChange={(e) => setAuthorCredited(e.target.value)}
+                                />
                             </label>
                         </div>
                         <button>Save Photograph</button>
