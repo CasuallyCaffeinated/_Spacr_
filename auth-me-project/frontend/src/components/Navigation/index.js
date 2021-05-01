@@ -8,8 +8,12 @@ import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import './Navigation.css';
 
+import { useLocation } from "react-router-dom";
+
 function Navigation({ isLoaded }){
   const sessionUser = useSelector(state => state.session.user);
+
+  const location = useLocation();
 
   let sessionLinks;
   if (sessionUser) {
@@ -47,21 +51,27 @@ function Navigation({ isLoaded }){
   }
 
   return (
-        <Navbar>
+    <>
+
+    <Navbar>
           <li className="navlink-item">
-                <NavLink exact to="/">
-                  <ul>
-                    <li>
-                  {<i class="fas fa-home"></i>}
-                    </li>
-                    <li className="nav-btn text">
-                        Home
-                    </li>
-                  </ul>
+            {
+            location.pathname === "/" ? null :
+            <NavLink exact to="/">
+            <ul>
+              <li>
+            {<i class="fas fa-home"></i>}
+              </li>
+              <li className="nav-btn text">
+                  Home
+              </li>
+            </ul>
                   </NavLink>
+            }
                 {isLoaded && sessionLinks}
           </li>
         </Navbar>
+        </>
   );
 }
 
