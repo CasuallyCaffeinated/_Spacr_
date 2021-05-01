@@ -112,7 +112,7 @@ function SignupPage() {
           <div id="login-btn">
             <h4>Already a member of Spacr?</h4>
               <p>
-                  <Link key={`login_btn`} to="/login">Click here!</Link>
+                  <Link key={`login_btn`} to="/login">The log in page, Master Jedi</Link>
               </p>
           </div>
           </div>
