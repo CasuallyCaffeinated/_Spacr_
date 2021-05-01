@@ -46,7 +46,7 @@ function SignupPage() {
       return (
         <>
         <div className="form-main-body">
-          <img src={apod2} alt="APOD" />
+          <div id="img-div">
           <div id="form-div">
           <form className="formSignup" onSubmit={handleSubmit}>
           <ul>
@@ -112,11 +112,12 @@ function SignupPage() {
           <div id="login-btn">
             <h4>Already a member of Spacr?</h4>
               <p>
-                  <Link key={`login_btn`} to="/login">Click here!</Link>
+                  <Link key={`login_btn`} to="/login">The log in page, Master Jedi</Link>
               </p>
           </div>
           </div>
             </form>
+          </div>
           </div>
         <Footer />
         </div>

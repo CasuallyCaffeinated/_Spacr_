@@ -21,7 +21,17 @@ font-family: 'Oswald', sans-serif; */
 }
 
 
-body, ul, div, nav {
+body,
+ul,
+div,
+nav,
+img,
+form,
+footer,
+h1,
+h2,
+h3,
+h4 {
     padding: 0px;
     margin: 0px;
 }
@@ -39,10 +49,6 @@ body, ul, div, nav {
     --warning-color: #d9534f;
 }
 
-body, ul, div, nav, h1 {
-    padding: 0px;
-    margin: 0px;
-}
 
 ul {
     list-style: none;
