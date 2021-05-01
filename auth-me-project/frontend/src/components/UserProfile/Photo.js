@@ -17,10 +17,16 @@ console.log(image);
                             alt="Spaaaaaaaace"
                             />
                             <h3 className="heading author">{image.authorCredited}</h3>
-                        <div id="img-desc">
-                            A description:
+                            {image.description.length === 0 ?
+                            <div id="img-desc">
+                            Edit this photograph to add a description.
                             <p>{image.description}</p>
-                        </div>
+                            </div>
+                            :
+                            <div id="img-desc">
+                            Description:
+                            <p>{image.description}</p>
+                        </div>}
                 </div>
         </>
     )
