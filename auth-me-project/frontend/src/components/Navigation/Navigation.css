@@ -16,9 +16,10 @@ font-family: 'Sue Ellen Francisco', cursive;
   background-color: var(--bg);
   padding: 0rem 1rem;
   border-bottom: var(--border);
-  /* position: fixed;
+  position: fixed;
+  z-index: 1;
   width: 100%;
-  transition: none; */
+
 }
 
 /* The logo container */

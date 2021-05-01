@@ -30,7 +30,7 @@ let currentState = "inner";
 const outerDiv = useRef();
 const innerDiv = useRef();
 
-const handleFade = (timeout ) => {
+const handleFade = (timeout) => {
 
 
             if (currentState === "inner") {

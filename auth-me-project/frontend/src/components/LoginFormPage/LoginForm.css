@@ -1,20 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400&family=MuseoModerno:wght@200&family=Roboto:wght@300&family=Sue+Ellen+Francisco&display=swap');
 
-.form-main-body {
+.form-main-body-login {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   width: 100%;
+  height: 100vh;
+  background-image: url("https://apod.nasa.gov/apod/image/2010/Quantrids_Slovinsky_2048.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
+
 
 .formLogin {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
-    margin-left: 1rem;
-    margin-top: 1rem;
+    padding: 20px;
+
 }
 
 .formLogin label {
@@ -53,8 +59,8 @@
     outline: none;
 }
 
-.formLogin button {
-    width: 100%;
+.demo-user-btn {
+    width: 80%;
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
     font-size: 1.25rem;
@@ -65,7 +71,7 @@
     outline: none;
 }
 
-.formLogin button:hover {
+.demo-user-btn:hover {
     cursor: pointer;
     background-color: rgba(0, 96, 191, 0.125);
     box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
@@ -76,10 +82,22 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: fit-content;
+    height: auto;
 }
 
-#demo-btn button {
+.login-form-btn {
+    width: 80%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 1.25rem;
+    margin-top: 20px;
+    padding:  0.5rem 1.35rem;
+    border: 1px solid rgba(2, 71, 139, 0.65);
+    border-radius: 10px;
+    outline: none;
+}
+
+/* #demo-btn button {
     width: 20%;
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
@@ -89,4 +107,4 @@
     border: 1px solid rgba(2, 71, 139, 0.65);
     border-radius: 10px;
     outline: none;
-}
+} */

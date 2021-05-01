@@ -15,7 +15,7 @@
     background-position:cover;
     background-size: cover;
     width: 100%;
-    height: auto;
+    height: 100vh;
 }
 
 #form-div {
@@ -24,7 +24,7 @@
     align-items: center;
     position: relative;
     z-index: 1;
-
+    top: 60px;
 }
 
 .formSignup {
@@ -86,7 +86,7 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
     font-size: 1rem;
-    margin-top: 17px;
+    margin-top: 18px;
     margin-bottom: 20px;
     position: relative;
     /* right: 0.5rem; */
@@ -113,6 +113,8 @@
 #after-form h4 {
     color: rgb(140, 239, 247);
     /* opacity: 0.85; */
+    margin-top: 0px;
+    margin-bottom: 5px;
     font-weight: 900;
     font-size: 1.2rem;
     font-family: 'Fira Sans', sans-serif;

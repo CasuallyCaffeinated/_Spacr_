@@ -20,7 +20,7 @@ img {
 .bg-img-outer {
     background-image: url("https://apod.nasa.gov/apod/image/1510/IC1871_HSTwager.jpg");
     background-repeat: no-repeat;
-    background-position:cover;
+    background-position: center center;
     background-size: cover;
     width: 100%;
     height: 700px;
@@ -33,7 +33,7 @@ img {
     background-image: url("https://apod.nasa.gov/apod/image/2103/VolcanoStars_Vella_1920.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: cover;
+    background-position: center center;
     width: 100%;
     height: 700px;
     transition: opacity;
@@ -48,14 +48,14 @@ img {
     display: flex;
     flex-direction: column;
     position: relative;
-    bottom: 36rem;
+    bottom: 32rem;
     justify-content: center;
     align-items: center;
 }
 
 #welcome-msg {
     color: var(--text-color);
-    font-size: 2.8rem;
+    font-size: 3.4rem;
     font-family: 'Zen Dots', cursive;
 }
 

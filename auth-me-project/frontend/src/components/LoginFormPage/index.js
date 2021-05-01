@@ -39,7 +39,9 @@ function LoginFormPage() {
             //? JSX Form for login:
             return (
                 <>
-                    <div className="form-main-body">
+                    <div className="form-main-body-login">
+                    <div id="img-div-login">
+                    <div id="form-div-login">
                     <form className="formLogin" onSubmit={handleSubmit}>
                             <ul>
                                 {errors.map((error, index) => {
@@ -47,7 +49,7 @@ function LoginFormPage() {
                                 })}
                             </ul>
                             <label>
-                                Please enter Username or Email
+                                Username or Email
                                 <input
                                     className="input1"
                                     type="text"
@@ -57,7 +59,7 @@ function LoginFormPage() {
                                 />
                             </label>
                             <label>
-                                    Please enter Password
+                                    Password
                                     <input
                                         className="input2"
                                         type="password"
@@ -66,16 +68,21 @@ function LoginFormPage() {
                                         required
                                     />
                             </label>
-                            <button type="submit" >Log In</button>
+                            <button
+                            className="login-form-btn"
+                            type="submit" >Log In</button>
                     </form>
                         <div id="demo-btn">
                             <button
+                            className="demo-user-btn"
                                 onClick={() => dispatch(sessionActionCreators.demoUserLogin())}
                             >
                                 Demo Login</button>
                         </div>
                     </div>
+                </div>
                     <Footer />
+            </div>
                 </>
             )
 }
