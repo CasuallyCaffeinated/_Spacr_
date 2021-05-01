@@ -23,6 +23,7 @@ function Navigation({ isLoaded }){
   } else {
     sessionLinks = (
       <>
+      {location.pathname !== "/signup" ?
         <NavLink to="/signup">
           <ul>
             <li>
@@ -33,6 +34,11 @@ function Navigation({ isLoaded }){
             </li>
           </ul>
           </NavLink>
+      :
+      null
+    }
+    {location.pathname !== "/login"
+    ?
         <NavLink to="/login">
           <ul>
           <li>
@@ -45,6 +51,9 @@ function Navigation({ isLoaded }){
           </li>
           </ul>
           </NavLink>
+      :
+      null
+    }
         {/* <NavLink to="/demo">Demo Login</NavLink> */}
       </>
     );
