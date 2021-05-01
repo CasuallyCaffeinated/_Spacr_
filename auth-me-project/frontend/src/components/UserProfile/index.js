@@ -9,10 +9,12 @@ import "./photo.css"
 
 import ProfileHeader from "./profileHeader";
 
+import Footer from "../Footer";
+
 function UserProfile() {
     const dispatch = useDispatch()
     const photos = useSelector(state => state.photo)
-    
+
 
     // console.log("THIS IS THE USER:", user);
     const { id } = useParams()
@@ -31,6 +33,7 @@ function UserProfile() {
                         Object.values(photos).map(image => <Photo key={image.id} image={image} />)
                     }
         </div>
+        <Footer />
         </>
     )
 }

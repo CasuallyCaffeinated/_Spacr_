@@ -9,13 +9,13 @@ function Footer() {
                         <li className="dev">Developer — Christian Cozma</li>
                         <li className="footer-dash">——</li>
                         <li>
-                            <a href="https://github.com/Christian-Cozma" target="blank">GitHub</a>
+                            <a href="https://github.com/Christian-Cozma" target="blank"><i class="fab fa-github"></i>  GitHub</a>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/in/christian-cozma-9847431ba/" target="blank">LinkedIn</a>
+                            <a href="https://www.linkedin.com/in/christian-cozma-9847431ba/" target="blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/cozma_christian" target="blank">Twitter</a>
+                            <a href="https://twitter.com/cozma_christian" target="blank"><i class="fab fa-twitter"></i> Twitter</a>
                         </li>
                     </ul>
             </div>
@@ -23,4 +23,4 @@ function Footer() {
     )
 }
 
-export default Footer
+export default Footer;
