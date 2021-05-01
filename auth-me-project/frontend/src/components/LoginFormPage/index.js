@@ -38,16 +38,26 @@ function LoginFormPage() {
             }
             //? JSX Form for login:
             return (
-                <>
-                    <div className="form-main-body-login">
+<>
+            <div className="form-main-body-login">
+                <div className="welcome-back-login-msg"></div>
                     <div id="img-div-login">
+                    {
+                    errors.length > 0 ?
+                        <div className="error-ul-div">
+                        <ul>
+                            {errors.map((error, index) => {
+                                return<li key={index}>{error}</li>
+                            })}
+                        </ul>
+                     </div>
+
+                     :
+
+                     null
+                }
                     <div id="form-div-login">
                     <form className="formLogin" onSubmit={handleSubmit}>
-                            <ul>
-                                {errors.map((error, index) => {
-                                    <li key={index}>{error}</li>
-                                })}
-                            </ul>
                             <label>
                                 Username or Email
                                 <input
@@ -71,8 +81,10 @@ function LoginFormPage() {
                             <button
                             className="login-form-btn"
                             type="submit" >Log In</button>
+                             <div className="error-ul">
+                         </div>
                     </form>
-                        <div id="demo-btn">
+                        <div id="demo-btn-div">
                             <button
                             className="demo-user-btn"
                                 onClick={() => dispatch(sessionActionCreators.demoUserLogin())}
@@ -83,7 +95,7 @@ function LoginFormPage() {
                 </div>
                     <Footer />
             </div>
-                </>
+</>
             )
 }
 
