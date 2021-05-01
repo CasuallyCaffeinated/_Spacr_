@@ -10,17 +10,14 @@
 //* HOMEPAGE COMPONENT *//
 import './SplashPage.css'
 import Footer from "../Footer/index"
-// import apod2 from "../../imgs/apod2.jpg";
-
-// import images from "./images";
 import images from "./images"
+// import Navigation from "../Navigation"
 
 //todo: import all the necessary hooks and actions
 import React from 'react';
 import { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-// import { useState } from "react";
-// import { useHistory, Link, NavLink } from 'react-router-dom';
+
 
 function HomePage() {
 
@@ -83,6 +80,8 @@ useEffect(() => {
 
     return (
         <div>
+            {/* <Navigation /> */}
+        <div id="hp-master-container">
                 <div
                 className="bg-img-outer"
                 ref={outerDiv}>
@@ -98,6 +97,7 @@ useEffect(() => {
                 </div>
             <Footer />
         </div>
+    </div>
     )
 }
 

@@ -8,6 +8,12 @@ font-family: 'Open Sans', sans-serif;
 font-family: 'Ubuntu', sans-serif;
 font-family: 'Zen Dots', cursive; */
 
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Fira+Sans:wght@200&family=Oswald:wght@300&display=swap');
+
+/* font-family: 'Courgette', cursive;
+font-family: 'Fira Sans', sans-serif;
+font-family: 'Oswald', sans-serif; */
+
 
 * {
     box-sizing: border-box;
