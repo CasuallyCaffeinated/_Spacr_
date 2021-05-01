@@ -125,7 +125,8 @@ router.get (
     const photos = await Photo.findAll({
       where: {
         userId
-      }
+      },
+      order: [["createdAt", "ASC"]]
     })
       res.json(photos)
   })
