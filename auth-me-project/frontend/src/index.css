@@ -21,7 +21,7 @@ font-family: 'Oswald', sans-serif; */
 }
 
 
-body, ul, div, nav {
+body, ul, div, nav, img, form, footer {
     padding: 0px;
     margin: 0px;
 }

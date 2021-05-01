@@ -46,7 +46,7 @@ function SignupPage() {
       return (
         <>
         <div className="form-main-body">
-          <img src={apod2} alt="APOD" />
+          <div id="img-div">
           <div id="form-div">
           <form className="formSignup" onSubmit={handleSubmit}>
           <ul>
@@ -117,6 +117,7 @@ function SignupPage() {
           </div>
           </div>
             </form>
+          </div>
           </div>
         <Footer />
         </div>

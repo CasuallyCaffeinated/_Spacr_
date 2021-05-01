@@ -2,13 +2,27 @@
 
 @import "../../index.css";
 
+#form-main-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#img-div {
+    background-image: url("https://apod.nasa.gov/apod/image/1510/IC1871_HSTwager.jpg");
+    background-repeat: no-repeat;
+    background-position:cover;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+
 #form-div {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* height: fit-content;
-    position: absolute;
-    top: 2.5rem; */
+    position: relative;
+    z-index: 1;
 
 }
 
@@ -26,7 +40,7 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
     font-size: 1.25rem;
-    color: whitesmoke;
+    color: var(--text-color);
     margin-top: 10px;
     margin-bottom: 20px;
     display: flex;
