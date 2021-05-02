@@ -81,6 +81,18 @@ font-family: 'Sue Ellen Francisco', cursive;
 }
 
 
+.profile-dropdown{
+  position: absolute;
+  z-index: 1;
+  top: 2.8rem;
+  right: 2.2rem;
+}
+
+.profile-dropdown li button {
+  padding: 10px 30px;
+  font-size: 1rem;
+}
+
 
 
 

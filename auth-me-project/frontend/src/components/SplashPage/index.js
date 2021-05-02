@@ -95,9 +95,9 @@ useEffect(() => {
                 <h1 id="welcome-msg">Welcome to Spacr!</h1>
                 <button id="hp-pg__sign-up-btn"><Link key="h-pg__sign-up-btn" to="/signup">Sign up, Space Cowboy</Link></button>
                 </div>
-            <Footer />
         </div>
-    </div>
+    <Footer />
+</div>
     )
 }
 

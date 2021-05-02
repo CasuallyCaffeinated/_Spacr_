@@ -1,8 +1,11 @@
 @import "../../index.css";
 
 #hp-master-container {
-    overflow: clip!important;
     background-repeat: no-repeat;
+    background-position:cover;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
 }
 
 #hp-master-container::-webkit-scrollbar {
