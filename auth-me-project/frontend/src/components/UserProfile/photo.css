@@ -288,6 +288,23 @@ font-family: 'Zen Dots', cursive; */
     }
   }
 
+  /* PROFILE HEADER COMPONENT */
+.ph-container {
+    position: relative;
+    top: 60px;
+    margin-bottom: 5rem;
+}
+
+.border-div hr {
+    border-style: none;
+    border-bottom-style: dotted;
+    color: lightgray;
+    width: 20%;
+    border-width: 8px;
+    height: 5%;
+    margin-bottom: 2rem;
+}
+
 
 /* ADD IMAGE MODAL STARTS HERE */
 .add-img-modal {

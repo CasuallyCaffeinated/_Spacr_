@@ -67,6 +67,9 @@ function ProfileHeader() {
                     </ul>
                 </div>
             </div>
+                <div className="border-div">
+                    <hr />
+                </div>
         </div>
     )
 }
