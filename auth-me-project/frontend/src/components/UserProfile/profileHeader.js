@@ -10,26 +10,18 @@ import { addUserPhoto } from "../../store/photos";
 
 //TODO: GLOBAL CATEGORIES ARRAY:
 const CATEGORIES = [
-    "Binary Stars",
-    "Black Hole",
-    "Globular Cluster",
-    "Individual Star",
-    "Neutron Star",
-    "Nursery",
-    "Open Cluster",
-    "The Sun",
+    "Stars",
     "White Dwarfs",
-    "Cluster of Galaxies",
-    "Colliding Galaxy",
-    "Elliptical Galaxy",
-    "Local Group",
+    "Nursery",
+    "The Sun",
+    "Galaxies",
     "The Milky Way",
-    "Spiral Galaxy",
-    "Nebula",
-    "Supernova Remnants",
+    "Local Groups",
+    "Nebulae",
     "Quasar",
-    "Active Galactic Nuclei",
-    "Dark Matter"
+    "Dark Matter",
+    "Black Holes",
+    "Other"
 ]
 
 function ProfileHeader() {
@@ -56,7 +48,7 @@ function ProfileHeader() {
                 </div>
                 <div className="add-pic-div">
                     <ul>
-                        <li className="add-pic-modal">Add a photo</li>
+                        <li className="add-pic-modal-text">Add a photo</li>
                         <li>
                             <button
                             className="show-add-modal"
@@ -116,16 +108,16 @@ function AddImgModal({props}) {
                 {/* {open ? <AddImgModal /> : null} */}
                 <form id="add-img-form" onSubmit={handleSubmit}>
                         <div className="main-add-img-modal-body">
-                            <label className="add-img-modal-labels">
-                                Title
+                            <label className="add-img-modal-labels aim-l-or-btn">
+                                Title*
                                 <input
                                 type="text"
                                 value={title}
                                 onChange={(e) => setTitle(e.target.value)}
                                 />
                             </label>
-                            <label className="add-img-modal-labels">
-                                Category
+                            <label className="add-img-modal-labels select-label">
+                                Category*
                                 <select
                                 value={category}
                                 onChange={(e) => setCategory(e.target.value)}
@@ -149,7 +141,7 @@ function AddImgModal({props}) {
                                      />
                             </label>
                             <label className="add-img-modal-labels">
-                                Image URL
+                                Image URL*
                                 <input
                                 type="text"
                                 value={photoUrl}
@@ -157,7 +149,7 @@ function AddImgModal({props}) {
                                 />
                             </label>
                             <label className="add-img-modal-labels">
-                                Illustrator/Creator Credited
+                                Creator(s) Credited*
                                 <input
                                 type="text"
                                 value={authorCredited}
@@ -165,8 +157,8 @@ function AddImgModal({props}) {
                                 />
                             </label>
                         </div>
-                        <button>Save Photograph</button>
-                        <button onClick={handleClick}>Cancel</button>
+                        <button className="aim-l-or-btn">Save Photograph</button>
+                        <button className="aim-l-or-btn" onClick={handleClick}>Cancel</button>
                 </form>
             </div>
         </div>
