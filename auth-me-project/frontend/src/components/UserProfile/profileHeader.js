@@ -56,7 +56,7 @@ function ProfileHeader() {
                 </div>
                 <div className="add-pic-div">
                     <ul>
-                        <li>Add a photo</li>
+                        <li className="add-pic-modal">Add a photo</li>
                         <li>
                             <button
                             className="show-add-modal"
@@ -116,7 +116,7 @@ function AddImgModal({props}) {
                 {/* {open ? <AddImgModal /> : null} */}
                 <form id="add-img-form" onSubmit={handleSubmit}>
                         <div className="main-add-img-modal-body">
-                            <label>
+                            <label className="add-img-modal-labels">
                                 Title
                                 <input
                                 type="text"
@@ -124,7 +124,7 @@ function AddImgModal({props}) {
                                 onChange={(e) => setTitle(e.target.value)}
                                 />
                             </label>
-                            <label>
+                            <label className="add-img-modal-labels">
                                 Category
                                 <select
                                 value={category}
@@ -140,7 +140,7 @@ function AddImgModal({props}) {
                                 ))}
                                 </select>
                             </label>
-                            <label>
+                            <label className="add-img-modal-labels">
                                     Description
                                     <textarea
                                     type="text"
@@ -148,7 +148,7 @@ function AddImgModal({props}) {
                                     onChange={(e) => setDescription(e.target.value)}
                                      />
                             </label>
-                            <label>
+                            <label className="add-img-modal-labels">
                                 Image URL
                                 <input
                                 type="text"
@@ -156,7 +156,7 @@ function AddImgModal({props}) {
                                 onChange={(e) => setPhotoUrl(e.target.value)}
                                 />
                             </label>
-                            <label>
+                            <label className="add-img-modal-labels">
                                 Illustrator/Creator Credited
                                 <input
                                 type="text"

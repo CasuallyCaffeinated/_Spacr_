@@ -295,6 +295,14 @@ font-family: 'Zen Dots', cursive; */
     margin-bottom: 5rem;
 }
 
+.ph-welcome-msg {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.add-pic-modal-text {
+    font-family: 'Fira Sans', sans-serif;
+}
+
 .border-div hr {
     border-style: none;
     border-bottom-style: dotted;
@@ -308,7 +316,17 @@ font-family: 'Zen Dots', cursive; */
 
 /* ADD IMAGE MODAL STARTS HERE */
 .add-img-modal {
+    /*size*/
     width: 500px;
     height: 500px;
-    background-color: pink;
+    /*positioning*/
+    position: absolute;
+    z-index: 1;
+    transform: translate3d(3rem, 25%, 0);
+    /*traits*/
+    background-color: var(--text-color);
+    opacity: 0.75;
+    border: 3px solid rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
 }
