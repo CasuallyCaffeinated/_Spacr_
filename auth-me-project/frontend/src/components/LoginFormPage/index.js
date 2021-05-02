@@ -42,20 +42,6 @@ function LoginFormPage() {
             <div className="form-main-body-login">
                 <div className="welcome-back-login-msg"></div>
                     <div id="img-div-login">
-                    {
-                    errors.length > 0 ?
-                        <div className="error-ul-div">
-                        <ul>
-                            {errors.map((error, index) => {
-                                return<li key={index}>{error}</li>
-                            })}
-                        </ul>
-                     </div>
-
-                     :
-
-                     null
-                }
                     <div id="form-div-login">
                     <form className="formLogin" onSubmit={handleSubmit}>
                             <label>

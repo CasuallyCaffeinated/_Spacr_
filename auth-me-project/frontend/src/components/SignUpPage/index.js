@@ -48,10 +48,21 @@ function SignupPage() {
         <div className="form-main-body">
           <div id="img-div">
           <div id="form-div">
+          {
+                    errors.length > 0 ?
+                        <div className="error-ul-div-sign-up">
+                        <ul>
+                            {errors.map((error, index) => {
+                                return<li key={index}>— {error}</li>
+                            })}
+                        </ul>
+                     </div>
+
+                     :
+
+                     null
+                }
           <form className="formSignup" onSubmit={handleSubmit}>
-          <ul>
-            {errors.map((error, idx) => <li key={idx}>{error}</li>)}
-          </ul>
           <label>
               Sign up for Spacr
             <input
