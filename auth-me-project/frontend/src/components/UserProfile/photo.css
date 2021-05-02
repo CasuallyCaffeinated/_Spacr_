@@ -296,12 +296,57 @@ font-family: 'Zen Dots', cursive; */
 }
 
 .ph-welcome-msg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ph-welcome-msg > h1 {
     font-family: 'Fira Sans', sans-serif;
+    border-radius: 10px;
+    border: 3px solid rgba(0, 0, 0, 0.7);
+    padding: 10px 15px;
+}
+
+.add-pic-div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 90%;
+    position: absolute;
+    z-index: 1;
+    bottom: 0.2rem;
+    left: 2rem;
+}
+
+.add-pic-div > ul  {
+    border-radius: 10px;
+    border: 3px solid rgba(0, 0, 0, 0.9);
+    padding: 3px;
+
+    /* color: white; */
+    font-weight: 900;
 }
 
 .add-pic-modal-text {
     font-family: 'Fira Sans', sans-serif;
 }
+
+.add-pic-div button {
+    background: #0069ed;
+    transition: background 200ms ease-in-out,
+    transform 150ms ease;
+}
+
+.add-pic-div button:hover,
+.add-pic-div button:focus {
+    background: #0053ba;
+}
+
+.add-pic-div button:active {
+    transform: scale(0.99);
+}
+
 
 .border-div hr {
     border-style: none;
@@ -317,16 +362,72 @@ font-family: 'Zen Dots', cursive; */
 /* ADD IMAGE MODAL STARTS HERE */
 .add-img-modal {
     /*size*/
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
+    /*display*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /*positioning*/
     position: absolute;
+    top: 5.6rem;
+    left: 0.1rem;
     z-index: 1;
-    transform: translate3d(3rem, 25%, 0);
+
     /*traits*/
-    background-color: var(--text-color);
-    opacity: 0.75;
+    /* background-color: var(--text-color); */
+    background-image: url("https://apod.nasa.gov/apod/image/2103/M64_Hubble_4032.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+
     border: 3px solid rgba(0, 0, 0, 0.7);
     border-radius: 10px;
     box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
 }
+
+.main-add-img-modal-body {
+     /*size*/
+    width: 300px;
+     height: 300px;
+     /*display*/
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+
+.add-img-form
+label,
+button {
+    margin: 15px;
+    font-family: 'Fira Sans', sans-serif;
+    padding: 5px 20px;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    background-color: var(--bg-accent);
+    color: var(--text-color)
+}
+
+.add-img-modal-labels {
+    margin: 2% 0;
+    font-family: 'Merriweather', serif;
+    font-size: 1rem;
+    /* color: white; */
+}
+
+.add-img-modal-labels select {
+    display: block;
+}
+
+.add-img-modal-labels
+ input,
+ select,
+ textarea {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 700;
+    padding: 5px 20px;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    background-color: var(--bg-accent);
+    color: var(--text-color)!important;
+ }
