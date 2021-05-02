@@ -27,6 +27,24 @@
     top: 60px;
 }
 
+.error-ul-div-sign-up {
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: var(--warning-color-deep);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: auto;
+    padding: 5px 5px;
+    background-color: rgba(73, 93, 184, 0.45);
+    border: 3px solid rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+    position: absolute;
+    top: 1.5rem;
+    left: 80px;
+}
+
 .formSignup {
     /* border: 2px solid rgba(0, 0, 0, 0.75); */
     background-color: rgba(102, 73, 184, 0.45);
@@ -34,8 +52,9 @@
     padding: 10px 30px 0px 30px;
     border: 3px solid rgba(0, 0, 0, 0.75);
     border-radius: 10px;
-
 }
+
+
 
 .formSignup label {
     font-family: 'Roboto', sans-serif;

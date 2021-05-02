@@ -17,6 +17,7 @@ font-family: 'Sue Ellen Francisco', cursive;
   padding: 0rem 1rem;
   border-bottom: var(--border);
   position: fixed;
+  top: 0;
   z-index: 1;
   width: 100%;
 
