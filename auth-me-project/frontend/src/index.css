@@ -14,6 +14,10 @@ font-family: 'Zen Dots', cursive; */
 font-family: 'Fira Sans', sans-serif;
 font-family: 'Oswald', sans-serif; */
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+/* font-family: 'Noto Sans KR', sans-serif; */
+
 
 * {
     box-sizing: border-box;
@@ -43,6 +47,7 @@ footer {
     --speed: 500ms;
     --warning-color: #d9534f;
     --warning-color-deep: #e42019;
+    --warning-color-deeper: #ff0e06;
 }
 
 

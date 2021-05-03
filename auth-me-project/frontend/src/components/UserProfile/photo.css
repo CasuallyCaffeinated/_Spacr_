@@ -6,6 +6,8 @@ font-family: 'Open Sans', sans-serif;
 font-family: 'Ubuntu', sans-serif;
 font-family: 'Zen Dots', cursive; */
 
+@import "../../index.css";
+
 #master-div {
     margin: 0;
     padding: 0;
@@ -391,24 +393,23 @@ font-family: 'Zen Dots', cursive; */
 }
 
 .add-img-error-div {
-    width: 500px;
-    height: 500px;
-    background-color: pink;
-    /* font-size: 1.25rem;
+
+    font-size: 1.25rem;
     font-weight: 900;
-    color: var(--warning-color-deep);
+    color: var(--warning-color-deeper);
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 20%;
-    height: auto;
+    align-items: space-between;
+    width: 55%;
+    height: 395px;
     padding: 10px 5px;
-    background-color: rgba(73, 93, 184, 0.45);
+    background-color: rgba(7, 41, 194, 0.658);
     border: 3px solid rgba(0, 0, 0, 0.75);
     border-radius: 10px;
     position: absolute;
-    top: 11.5rem;
-    right: 80px; */
+    top: 0;
+    left: 395px;
+    font-style: italic;
 }
 
 .main-add-img-modal-body {
