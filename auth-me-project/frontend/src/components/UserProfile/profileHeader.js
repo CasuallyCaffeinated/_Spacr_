@@ -81,14 +81,27 @@ function AddImgModal({props}) {
     const [description, setDescription] = useState('')
     const [photoUrl, setPhotoUrl] = useState('')
     const [authorCredited, setAuthorCredited] = useState('')
+    const [errors, setErrors] = useState([]);
 
 
     // const handleClick = () => {
     //         setOpen(false)
     //     };
 
+    //? Handle submit custom event handler:
+    // const handleSubmit = (e) => {
+    //     e.preventDefault()
+    //     setErrors([]);
+    //     return dispatch(sessionActionCreators.login({ credential, password }))
+    //             .catch(async res => {
+    //                 const data = await res.json();
+    //                 if (data && data.errors) setErrors(data.errors)
+    //             })
+    //         }
+
     const handleSubmit = (e) => {
         e.preventDefault();
+
 
         const formData = {
             title,
@@ -99,13 +112,32 @@ function AddImgModal({props}) {
             userId: id
         }
 
-        dispatch(addUserPhoto(formData))
+        setErrors([]);
+        return dispatch(addUserPhoto(formData))
+                .catch(async res => {
+                        const data = await res.json();
+                                if (data && data.errors) setErrors(data.errors)
+                })
+
     }
 
     return (
         <div>
             <div className="add-img-modal">
-                {/* {open ? <AddImgModal /> : null} */}
+            {
+                    errors.length > 0 ?
+                        <div className="add-img-error-div">
+                        <ul>
+                            {errors.map((error, index) => {
+                                return<li key={index}>— {error}</li>
+                            })}
+                        </ul>
+                     </div>
+
+                     :
+
+                     null
+                }
                 <form id="add-img-form" onSubmit={handleSubmit}>
                         <div className="main-add-img-modal-body">
                             <label className="add-img-modal-labels aim-l-or-btn">

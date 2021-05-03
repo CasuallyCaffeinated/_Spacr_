@@ -1,7 +1,7 @@
 //* SIGNUP FORM COMPONENT *//
 import './SignupForm.css'
 import Footer from "../Footer/index"
-import apod2 from "../../imgs/apod2.jpg"
+// import apod2 from "../../imgs/apod2.jpg"
 
 //todo: import all the necessary hooks and actions
 import React, { useState } from 'react';

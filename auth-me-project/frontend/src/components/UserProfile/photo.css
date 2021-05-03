@@ -390,6 +390,27 @@ font-family: 'Zen Dots', cursive; */
     box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
 }
 
+.add-img-error-div {
+    width: 500px;
+    height: 500px;
+    background-color: pink;
+    /* font-size: 1.25rem;
+    font-weight: 900;
+    color: var(--warning-color-deep);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: auto;
+    padding: 10px 5px;
+    background-color: rgba(73, 93, 184, 0.45);
+    border: 3px solid rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+    position: absolute;
+    top: 11.5rem;
+    right: 80px; */
+}
+
 .main-add-img-modal-body {
      /*size*/
     width: 300px;
