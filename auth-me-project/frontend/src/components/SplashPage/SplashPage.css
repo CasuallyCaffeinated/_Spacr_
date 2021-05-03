@@ -88,6 +88,8 @@ img {
 #hp-pg__sign-up-btn {
     font-size: 1.2rem;
     background-color: var(--bg-accent);
+    position: relative;
+    top: 2rem;
     padding: 1rem;
     margin-top: 2rem;
     border-radius: 5px;

@@ -3,7 +3,7 @@ import "./photo.css"
 import EditBtn from "./EditBtn";
 
 function Photo({image}) {
-console.log(image);
+// console.log(image);
     return (
         <>
                 <div className="image-container">

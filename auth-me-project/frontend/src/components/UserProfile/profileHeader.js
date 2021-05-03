@@ -26,7 +26,7 @@ const CATEGORIES = [
 
 function ProfileHeader() {
     const user = useSelector(state => state.session.user)
-    const photo = useSelector(state => state.photo)
+    // const photo = useSelector(state => state.photo)
     // const dispatch = useDispatch();
 
     // useEffect(() => {
