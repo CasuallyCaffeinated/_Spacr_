@@ -21,10 +21,10 @@ import { Link } from "react-router-dom";
 
 function HomePage() {
 
-// console.log(images)
+
 
 let index = 2;
-let opacity = 0;
+// let opacity = 0;
 let currentState = "inner";
 
 const outerDiv = useRef();
@@ -42,7 +42,6 @@ const handleFade = (timeout) => {
                 timeout = setTimeout(() => {
                     outerDiv.current.style.backgroundImage = `url(${images[index].image_path})`
                     index += 1
-                    // console.log(outerDiv.current.style.backgroundImage);
                 }, 3000)
                 return timeout;
             } else {
@@ -68,7 +67,7 @@ useEffect(() => {
     if (outerDiv && innerDiv) {
         interval = setInterval(() => {
        timeout = handleFade(timeout)
-       console.log(timeout);
+    //    console.log(timeout);
         }, 4000)
     }
     return () => {
