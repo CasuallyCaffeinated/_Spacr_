@@ -93,6 +93,10 @@ useEffect(() => {
                 </div>
                 <div id="welcome-div">
                 <h1 id="welcome-msg">Welcome to Spacr!</h1>
+                <p id="welcome-msg-p"><div className="action-call">Fuel your fascination.</div>
+                <br /> — Join the Spacr community —
+                <br />A home to all those intrigued by the wonders of space.
+                <br />Join us and share your story.</p>
                 <button id="hp-pg__sign-up-btn"><Link key="h-pg__sign-up-btn" to="/signup">Sign up, Space Cowboy</Link></button>
                 </div>
         </div>

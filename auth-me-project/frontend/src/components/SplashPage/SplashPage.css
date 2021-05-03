@@ -61,7 +61,28 @@ img {
     font-size: 3.4rem;
     font-family: 'Zen Dots', cursive;
     position: relative;
-    bottom: 4rem;
+    top: 2.2rem;
+}
+
+#welcome-msg-p {
+    color: var(--text-color);
+    font-size: 1.7rem;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 700;
+    position: relative;
+    top: 2rem;
+    text-align: center;
+    line-height: 2.2rem;
+    /* color: rgba(0, 0, 0, 0.8); */
+    /* background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 30px;
+    padding: 15px 20px; */
+}
+
+.action-call {
+    font-size: 2.2rem;
+    font-weight: 900;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 #hp-pg__sign-up-btn {
