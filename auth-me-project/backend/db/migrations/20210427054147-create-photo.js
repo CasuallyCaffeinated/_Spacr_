@@ -25,6 +25,7 @@ module.exports = {
       },
       authorCredited: {
         type: Sequelize.STRING(100),
+        allowNull: false
       },
       userId: {
         type: Sequelize.INTEGER,

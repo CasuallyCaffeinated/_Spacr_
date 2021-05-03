@@ -46,19 +46,24 @@ const validateSignup = [
 //* The description can be empty and the user Id is generated automatically. Therefore, they aren't added in the validator.
   const validatePhotoEntry = [
     check('title')
+    .exists({ checkFalsy: true })
     .notEmpty()
     .withMessage(`Please provide a title for your photo`),
     check(`category`)
+    .exists({ checkFalsy: true })
     .notEmpty()
     .withMessage(`Please provide a category for your photo`),
     check(`photoUrl`)
+    .exists({ checkFalsy: true })
     .notEmpty()
     .isURL()
     .withMessage(`Please provide a URL path for your photo`),
     check('authorCredited')
+    .exists({ checkFalsy: true })
     .notEmpty()
     .withMessage(`Please provide a title for your photo`),
-  ]
+    handleValidationErrors,
+  ];
 
   ////////////////////////////////////* API ENDPOINTS *//////////////////////////////
 

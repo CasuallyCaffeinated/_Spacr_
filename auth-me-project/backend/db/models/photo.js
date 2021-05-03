@@ -14,9 +14,11 @@ module.exports = (sequelize, DataTypes) => {
     },
     photoUrl: {
       type: DataTypes.STRING(255),
+      allowNull: false
     },
     authorCredited: {
-      type: DataTypes.STRING(100)
+      type: DataTypes.STRING(100),
+      allowNull: false
     },
     userId: {
       type: DataTypes.INTEGER,
