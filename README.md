@@ -1,4 +1,4 @@
-# Spacr
+# Welcome to Spacr
 
 #### *Spacr* is an application modeled on Flickr. It is an app that allows users to view pictures of space and its many wonders, including but not limited to: *stars, galaxies, nebulae, other miscellaneous interstellar phenomena such as quasars and dark matter, as well as planets from our own solar system*. 
 
